@@ -4,7 +4,7 @@
         "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
 
 <!-- 自动生成mappers文件 -->
-<!-- suppress ALL -->
+<!--suppress ALL -->
 <generatorConfiguration>
 
     <!--指定特定数据库的jdbc驱动jar包的位置 -->
