@@ -22,6 +22,7 @@ public class StudyApplicationTests {
         RedisPool.close(jedis);
         log.error("result:{}", result);
         RedisPool.end();
+        log.info("test");
 
     }
 
