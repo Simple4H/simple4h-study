@@ -2,13 +2,13 @@
 
 ## 不断学习新的技能！
 
-### 复习Mybatis--v1.0
+### 复习Mybatis--[v1.0](https://github.com/simplecxm/SimpleStudy/tree/v1.0)
 
 1. 连接池配置
 2. 分页插件集成
 3. Mybatis Generator自动生成Mapper
 
-### 复习Redis--v2.0
+### 复习Redis--[v2.0](https://github.com/simplecxm/SimpleStudy/tree/v2.0)
 1. ##### Redis
 
    - 配置Redis连接池
