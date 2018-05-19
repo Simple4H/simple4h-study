@@ -1,12 +1,17 @@
 package com.simple.pojo;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
+import java.io.Serializable;
 import java.util.Date;
 
-public class User {
+public class User implements Serializable {
     private Integer id;
 
     private String username;
 
+    @JsonIgnore
     private String password;
 
     private String email;
@@ -19,8 +24,10 @@ public class User {
 
     private Integer role;
 
+    @JsonFormat(pattern = "yyyy-MM-dd hh-MM-ss")
     private Date createTime;
 
+    @JsonFormat(pattern = "yyyy-MM-dd hh-MM-ss")
     private Date updateTime;
 
     public User(Integer id, String username, String password, String email, String phone, String question, String answer, Integer role, Date createTime, Date updateTime) {
