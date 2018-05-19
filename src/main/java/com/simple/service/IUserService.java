@@ -1,8 +1,9 @@
 package com.simple.service;
 
 import com.simple.common.ServerResponse;
+import com.simple.pojo.User;
 
 public interface IUserService {
 
-    ServerResponse login(String username, String password);
+    ServerResponse<User> login(String username, String password);
 }

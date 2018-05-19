@@ -13,7 +13,7 @@ public class UserServiceImpl implements IUserService {
     @Autowired
     private UserMapper userMapper;
 
-    public ServerResponse login(String username,String password) {
+    public ServerResponse<User> login(String username,String password) {
         User user = userMapper.login(username, password);
         if (user != null){
             return ServerResponse.createBySuccess("登录成功",user);
