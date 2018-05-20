@@ -34,11 +34,11 @@ public class EmailServiceImpl implements IEmailService {
         simpleMailMessage.setTo(email);
 
         // 发送标题
-        simpleMailMessage.setSubject("Hello~");
+        simpleMailMessage.setSubject("您好，欢迎注册~");
 
         // 发送内容
         int token = (int) (Math.random() * (9999 - 1000 + 1) + 1000);
-        simpleMailMessage.setText("你的验证码是:" + token);
+        simpleMailMessage.setText("您的验证码是:" + token);
 
         try {
             javaMailSender.send(simpleMailMessage);
