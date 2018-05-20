@@ -3,6 +3,7 @@ package com.simple.controller;
 import com.simple.common.Const;
 import com.simple.common.ServerResponse;
 import com.simple.pojo.User;
+import com.simple.service.IEmailService;
 import com.simple.service.IUserService;
 import com.simple.util.CookieUtil;
 import com.simple.util.JsonUtil;
@@ -23,6 +24,9 @@ public class UserController {
 
     @Autowired
     private IUserService iUserService;
+
+    @Autowired
+    private IEmailService iEmailService;
 
     // Spring session框架集成
     @RequestMapping(value = "login.do", method = RequestMethod.GET)
@@ -62,4 +66,31 @@ public class UserController {
         User user = JsonUtil.string2Obj(userJson, User.class);
         return ServerResponse.createBySuccess("获取成功", user);
     }
+
+    @RequestMapping(value = "register.do", method = RequestMethod.POST)
+    @ResponseBody
+    public ServerResponse register(User user, HttpSession session) {
+        ServerResponse response = iUserService.register(user);
+        if (response.isSuccess()) {
+            session.setAttribute(Const.CURRENT_USER, user);
+            return response;
+        }
+        return response;
+    }
+
+//    @RequestMapping(value = "check_email.do", method = RequestMethod.GET)
+//    @ResponseBody
+//    public ServerResponse checkEmail(HttpSession session) {
+//        User user = (User) session.getAttribute(Const.CURRENT_USER);
+//        // 获取用户邮箱
+//        String userEmail = user.getEmail();
+//        // 发送邮件
+//        ServerResponse response = iEmailService.sendEmail(userEmail);
+//        if (response.isSuccess()) {
+//            String token = (String) response.getData();
+//            session.setAttribute(Const.CURRENT_USER, user);
+//            return iUserService.register(user, token);
+//        }
+//        return response;
+//    }
 }

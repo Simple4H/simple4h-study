@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>注册</title>
+</head>
+<body>
+<form action="#" th:action="@{/user/register.do}" th:object="${user}" method="post">
+    <label>
+        用户名
+        <input type="text" th:field="*{username}" />
+    </label>
+    <label>
+        密码
+        <input type="password" th:field="*{password}" />
+    </label>
+    <label>
+        邮箱
+        <input type="text" th:field="*{email}" />
+    </label>
+    <label>
+        手机
+        <input type="text" th:field="*{phone}" />
+    </label>
+    <label>
+        密保问题
+        <input type="text" th:field="*{question}" />
+    </label>
+    <label>
+        答案
+        <input type="text" th:field="*{answer}" />
+    </label>
+    <input type="submit" />
+</form>
+</body>
+</html>

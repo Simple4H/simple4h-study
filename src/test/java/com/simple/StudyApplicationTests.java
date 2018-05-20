@@ -7,6 +7,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.test.context.junit4.SpringRunner;
 import redis.clients.jedis.Jedis;
 
@@ -14,6 +15,10 @@ import redis.clients.jedis.Jedis;
 @SpringBootTest
 @Slf4j
 public class StudyApplicationTests {
+
+    @Autowired
+    private JavaMailSender javaMailSender;
+
 
     @Test
     public void test() {
