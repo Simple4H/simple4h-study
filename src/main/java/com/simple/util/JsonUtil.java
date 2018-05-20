@@ -9,7 +9,6 @@ import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 
 import java.text.SimpleDateFormat;
-
 @Slf4j
 public class JsonUtil {
 
@@ -18,12 +17,16 @@ public class JsonUtil {
     static {
         // 对象的所有字段全部列入
         objectMapper.setSerializationInclusion(JsonInclude.Include.ALWAYS);
+
         // 取消默认转换timestamps形式
         objectMapper.configure(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS, false);
+
         // 忽略空bean转json的错误
         objectMapper.configure(SerializationFeature.FAIL_ON_EMPTY_BEANS, false);
+
         // 同一时间格式
         objectMapper.setDateFormat(new SimpleDateFormat(DateTimeUtil.STANDARD_FORMAT));
+
         // 忽略在json字符串存在，在Java对象中不存在对应属性的错误
         objectMapper.configure(SerializationFeature.FAIL_ON_UNWRAPPED_TYPE_IDENTIFIERS, false);
     }

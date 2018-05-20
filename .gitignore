@@ -6,3 +6,6 @@
 /target/
 out
 /.mvn/
+/mvnw.cmd
+/mvnw
+/.gitignore
