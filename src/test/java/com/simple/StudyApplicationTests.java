@@ -61,5 +61,11 @@ public class StudyApplicationTests {
         log.info("result:{}",result);
     }
 
+    @Test
+    public void random(){
+        int a = (int)(Math.random()*(9999-1000+1)+1000);
+        System.out.println(a);
+    }
+
 
 }

@@ -2,7 +2,10 @@ package com.simple.service.impl;
 
 import com.simple.common.ServerResponse;
 import com.simple.service.IEmailService;
+import com.simple.util.JsonUtil;
+import com.simple.util.RedisPoolUtil;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.mail.MailException;
@@ -34,16 +37,29 @@ public class EmailServiceImpl implements IEmailService {
         simpleMailMessage.setSubject("Hello~");
 
         // 发送内容
-        String token = "666666";
+        int token = (int) (Math.random() * (9999 - 1000 + 1) + 1000);
         simpleMailMessage.setText("你的验证码是:" + token);
 
         try {
             javaMailSender.send(simpleMailMessage);
-            return ServerResponse.createBySuccess("发送成功",token);
+            return ServerResponse.createBySuccess("发送成功", token);
         } catch (MailException e) {
             e.printStackTrace();
-            log.error("发送邮件异常:{}",e);
+            log.error("发送邮件异常:{}", e);
             return ServerResponse.createBySuccessMessage("发送失败");
         }
+    }
+
+    public ServerResponse checkEmailToken(String token,String email) {
+        // 先取Redis中的验证码，并且Json反序列化
+        String jsonResponse = JsonUtil.string2Obj(RedisPoolUtil.get(email),String.class);
+        if (jsonResponse != null) {
+            if (StringUtils.equals(jsonResponse,token)) {
+                return ServerResponse.createBySuccessMessage("邮箱验证成功");
+            }
+            return ServerResponse.createByErrorMessage("邮箱验证失败");
+        }
+        return ServerResponse.createByErrorMessage("验证码超时，请重新获取");
+
     }
 }

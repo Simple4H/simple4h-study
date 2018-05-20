@@ -6,6 +6,7 @@ public class Const {
 
     public interface RedisCacheExtime {
         int REDIS_SESSION_EXTIME = 60 * 30;
+        int CHECK_CODE = 60 * 5;
     }
 
     public interface Role {
