@@ -1,4 +1,4 @@
-package com.simple.rabbit;
+package com.simple.rabbit.simple;
 
 import com.rabbitmq.client.*;
 import com.simple.common.Const;
