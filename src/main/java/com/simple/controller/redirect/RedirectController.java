@@ -14,4 +14,19 @@ public class RedirectController {
         model.addAttribute("user", new User());
         return "index";
     }
+
+    @RequestMapping(value = "/login", method = RequestMethod.GET)
+    public String login() {
+        return "login";
+    }
+
+    @RequestMapping(value = "/email", method = RequestMethod.GET)
+    public String email() {
+        return "email";
+    }
+
+    @RequestMapping(value = "/checkEmail", method = RequestMethod.GET)
+    public String checkEmail() {
+        return "checkEmail";
+    }
 }

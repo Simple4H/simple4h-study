@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form th:action="@{/user/redis_login.do}" method="get">
+    <label>
+        用户名
+        <input type="text" id="username" name="username" />
+    </label>
+    <label>
+        密码
+        <input type="password" id="password" name="password" />
+    </label>
+    <input type="submit" />
+</form>
+</body>
+</html>
