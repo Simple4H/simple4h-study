@@ -1,12 +1,14 @@
 package com.simple.common;
 
 import com.simple.util.PropertiesUtil;
+import org.springframework.beans.factory.annotation.Configurable;
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPool;
 import redis.clients.jedis.JedisPoolConfig;
 
 import java.util.Objects;
 
+@Configurable
 public class RedisPool {
 
     // Jedis连接池

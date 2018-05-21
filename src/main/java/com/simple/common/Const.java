@@ -13,4 +13,8 @@ public class Const {
         int ROLE_CUSTOMER = 0;
         int ROLE_ADMIN = 1;
     }
+
+    public interface RABBITMQ {
+        String QUEUE_NAME = "SIMPLE_QUEUE";
+    }
 }
