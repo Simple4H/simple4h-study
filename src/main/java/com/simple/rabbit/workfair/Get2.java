@@ -27,13 +27,13 @@ public class Get2 {
             public void handleDelivery(String consumerTag, Envelope envelope, AMQP.BasicProperties properties, byte[] body) throws IOException {
                 super.handleDelivery(consumerTag, envelope, properties, body);
                 String msg = new String(body, "utf-8");
-                log.info("[2] Get:{}", msg);
+                log.info("[2] Get1:{}", msg);
                 try {
                     Thread.sleep(600);
                 } catch (InterruptedException e) {
                     log.info("Thread error:{}", e);
                 } finally {
-                    log.info("[2] Get done");
+                    log.info("[2] Get1 done");
                     // 手动回执
                     channel.basicAck(envelope.getDeliveryTag(), false);
                 }

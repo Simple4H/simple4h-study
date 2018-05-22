@@ -26,13 +26,13 @@ public class Get1 {
             public void handleDelivery(String consumerTag, Envelope envelope, AMQP.BasicProperties properties, byte[] body) throws IOException {
                 super.handleDelivery(consumerTag, envelope, properties, body);
                 String msg = new String(body, "utf-8");
-                log.info("[1] Get:{}", msg);
+                log.info("[1] Get1:{}", msg);
                 try {
                     Thread.sleep(300);
                 } catch (InterruptedException e) {
                     log.info("Thread error:{}", e);
                 } finally {
-                    log.info("[1] Get done");
+                    log.info("[1] Get1 done");
                 }
             }
         };

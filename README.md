@@ -73,3 +73,25 @@
         ##### ![Fair-Dispatch](https://github.com/simplecxm/SimpleStudy/blob/v4.0/src/main/resources/img/Fair-Dispatch.gif)
 
         - 有效的解决轮训分发的缺点
+
+4. ##### 消息应答与消息持久化
+
+   - ###### autoAck
+
+     - autoAck=true，（自动确认模式）一旦RabbitMq将消息发给消费者，就会从内存中删除。这种情况下，消费者被突然结束，就会失去正在处理的消息。
+     - autoAck=false，（手动确认模式）如果有个消费者突然结束，就会发送给其他可以运行的消费者。（因为手动模式消费完消息，需要手动返回一个Ack）。这保证了数据的安全。
+
+   - ###### 消息持久化
+
+     - durable=true，开启消息持久化。如果队列已经定义，那么true则会报错（RabbitMq不允许修改已经存在的队列）。
+
+5. ##### 订阅模式(Publish-Subscribe)
+
+   ##### ![Publish-Subscribe](https://github.com/simplecxm/SimpleStudy/blob/v4.0/src/main/resources/img/Publish-Subscribe.gif)
+
+   - 一个生产者有多个消费者。
+   - 每个消费者有一个队列。
+   - 生产者没有将消息直接发送给消费者，而是发送到转发器（Exchange）。
+   - 每个队列都要绑定到转发器上。
+   - 生产者的消息经过交换机，到达队列，就能实现**一个消息被多个消费者消费**。
+   - 转发器没有存储消息的能力，所以需要队列绑定。
