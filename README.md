@@ -95,3 +95,19 @@
    - 每个队列都要绑定到转发器上。
    - 生产者的消息经过交换机，到达队列，就能实现**一个消息被多个消费者消费**。
    - 转发器没有存储消息的能力，所以需要队列绑定。
+
+6. ##### 转换器（Exchange）
+
+   - 一方面是接收生产者的消息，另一方面是向队列推送消息。
+   - 匿名转发
+   - 交换机类型
+     1. Direct Exchange （处理路由键）
+     2. Fanout Exchange（不处理路由键）
+     3. Topic Exchange 
+     4. Headers exchange
+
+7. ##### 路由模式（Routing）
+
+   ##### ![Routing](https://github.com/simplecxm/SimpleStudy/blob/v4.0/src/main/resources/img/Routing.gi)
+
+   - 需要明确数据字典
