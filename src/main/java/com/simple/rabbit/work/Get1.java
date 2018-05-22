@@ -28,7 +28,7 @@ public class Get1 {
                 String msg = new String(body, "utf-8");
                 log.info("[1] Get:{}", msg);
                 try {
-                    Thread.sleep(1000);
+                    Thread.sleep(300);
                 } catch (InterruptedException e) {
                     log.info("Thread error:{}", e);
                 } finally {

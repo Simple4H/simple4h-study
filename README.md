@@ -59,10 +59,17 @@
 
      1. 一个生产者可以有多个消费者（一对多）。在实际开发中，生产者发送消息是相对简单的，而消费者是跟业务相结合的。消费者接受到消息以后，需要进行一些业务的处理，需要花费多一点的时间。这时候，消息队列就会积压很多消息，这时候，多个消费者的作用就体现出来了。
 
-   - ##### 不足
+   - ##### 方式
 
-     1. 
+     1. ##### 轮训分发（Round-Robin）
 
-   
+        ##### ![Round-Robin](https://github.com/simplecxm/SimpleStudy/blob/v4.0/src/main/resources/img/Round-Robin.gif)
 
-   ##### 
+        - 多个消费者消费的消息是一样的。
+        - 缺点是不会考虑业务逻辑的复杂。任务消息总是均分的。
+
+     2. ##### 公平分发（Fair-Dispatch）
+
+        ##### ![Fair-Dispatch](https://github.com/simplecxm/SimpleStudy/blob/v4.0/src/main/resources/img/Fair-Dispatch.gif)
+
+        - 有效的解决轮训分发的缺点
