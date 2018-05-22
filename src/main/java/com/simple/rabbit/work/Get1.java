@@ -1,4 +1,4 @@
-package com.simple.rabbit.simple;
+package com.simple.rabbit.work;
 
 import com.rabbitmq.client.*;
 import com.simple.common.Const;
@@ -9,21 +9,33 @@ import java.io.IOException;
 import java.util.concurrent.TimeoutException;
 
 @Slf4j
-public class Get {
+public class Get1 {
 
     public static void main(String[] args) throws IOException, TimeoutException {
+        // 获取连接
         Connection connection = RabbitmqConnection.getConnection();
+        // 获取频道
         Channel channel = connection.createChannel();
-        channel.queueDeclare(Const.RABBITMQ.SIMPLE_QUEUE_NAME, false, false, false, null);
-        DefaultConsumer defaultConsumer = new DefaultConsumer(channel) {
+        // 创建声明队列
+        channel.queueDeclare(Const.RABBITMQ.WORK_QUEUE_NAME, false, false, false, null);
+
+        // 消费者
+        Consumer consumer = new DefaultConsumer(channel) {
+            // 消息到达，触发方法
             @Override
             public void handleDelivery(String consumerTag, Envelope envelope, AMQP.BasicProperties properties, byte[] body) throws IOException {
                 super.handleDelivery(consumerTag, envelope, properties, body);
                 String msg = new String(body, "utf-8");
-                log.info("get msg:{}", msg);
+                log.info("[1] Get:{}", msg);
+                try {
+                    Thread.sleep(1000);
+                } catch (InterruptedException e) {
+                    log.info("Thread error:{}", e);
+                } finally {
+                    log.info("[1] Get done");
+                }
             }
         };
-        // 监听队列
-        channel.basicConsume(Const.RABBITMQ.SIMPLE_QUEUE_NAME, true, defaultConsumer);
+        channel.basicConsume(Const.RABBITMQ.WORK_QUEUE_NAME, true, consumer);
     }
 }

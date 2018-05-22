@@ -18,10 +18,10 @@ public class send {
         Connection connection = RabbitmqConnection.getConnection();
         // 从连接中获取一个通道
         Channel channel = connection.createChannel();
-        // 创建创建队列声明
-        channel.queueDeclare(Const.RABBITMQ.QUEUE_NAME, false, false, false, null);
+        // 创建队列声明
+        channel.queueDeclare(Const.RABBITMQ.SIMPLE_QUEUE_NAME, false, false, false, null);
         String msg = "Hello";
-        channel.basicPublish("", Const.RABBITMQ.QUEUE_NAME, null, msg.getBytes());
+        channel.basicPublish("", Const.RABBITMQ.SIMPLE_QUEUE_NAME, null, msg.getBytes());
         log.info("send msg:{}",msg);
         channel.close();
         connection.close();

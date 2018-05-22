@@ -15,6 +15,7 @@ public class Const {
     }
 
     public interface RABBITMQ {
-        String QUEUE_NAME = "SIMPLE_QUEUE";
+        String SIMPLE_QUEUE_NAME = "SIMPLE_QUEUE_NAME";
+        String WORK_QUEUE_NAME = "WORK_QUEUE_NAME";
     }
 }
