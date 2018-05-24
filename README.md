@@ -108,6 +108,14 @@
 
 7. ##### 路由模式（Routing）
 
-   ##### ![Routing](https://github.com/simplecxm/SimpleStudy/blob/v4.0/src/main/resources/img/Routing.gif)
+   ##### ![Routing](https://github.com/simplecxm/SimpleStudy/blob/v4.0/src/main/resources/img/Routing.gi)
 
    - 需要明确数据字典
+
+8. ##### 主题模式（Topics）
+
+   ##### ![Topics](https://github.com/simplecxm/SimpleStudy/blob/v4.0/src/main/resources/img/Topics.gif)
+
+   - 将路由键和某模式匹配
+   - “#” 匹配一个或者多个
+   - “*” 匹配一个

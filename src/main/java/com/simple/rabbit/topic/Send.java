@@ -17,7 +17,7 @@ public class Send {
         Channel channel = connection.createChannel();
         channel.exchangeDeclare(Const.RABBITMQ.TOPIC_EXCHANGE_NAME, "topic");
         String msg = "Topic...";
-        channel.basicPublish(Const.RABBITMQ.TOPIC_EXCHANGE_NAME, "good.add", null, msg.getBytes());
+        channel.basicPublish(Const.RABBITMQ.TOPIC_EXCHANGE_NAME, "good.orher", null, msg.getBytes());
         log.info("Send msg:{}", msg);
         channel.close();
         connection.close();

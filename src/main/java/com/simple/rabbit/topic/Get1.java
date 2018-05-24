@@ -17,6 +17,7 @@ public class Get1 {
         channel.queueDeclare(Const.RABBITMQ.TOPIC_QUEUE_NAME_1, false, false, false, null);
         channel.basicQos(1);
         channel.queueBind(Const.RABBITMQ.TOPIC_QUEUE_NAME_1, Const.RABBITMQ.TOPIC_EXCHANGE_NAME, "good.add");
+        channel.queueBind(Const.RABBITMQ.TOPIC_QUEUE_NAME_1, Const.RABBITMQ.TOPIC_EXCHANGE_NAME, "good.update");
 
         Consumer consumer = new DefaultConsumer(channel) {
             @Override
