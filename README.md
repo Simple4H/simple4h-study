@@ -108,7 +108,7 @@
 
 7. ##### 路由模式（Routing）
 
-   ##### ![Routing](https://github.com/simplecxm/SimpleStudy/blob/v4.0/src/main/resources/img/Routing.gi)
+   ##### ![Routing](https://github.com/simplecxm/SimpleStudy/blob/v4.0/src/main/resources/img/Routing.gif)
 
    - 需要明确数据字典
 
