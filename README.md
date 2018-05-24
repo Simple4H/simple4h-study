@@ -119,3 +119,18 @@
    - 将路由键和某模式匹配
    - “#” 匹配一个或者多个
    - “*” 匹配一个
+
+9. ##### RabbitMq的消息确认机制（事务+confirm）
+
+   - AMQP事务机制
+
+     ![AMQP](https://github.com/simplecxm/SimpleStudy/blob/v4.0/src/main/resources/img/Tx.gif)
+
+     - txSelect：将当前channel设置成transition模式。
+     - txCommit：用于提交事务。
+     - txRollback：用于回滚事务
+     - 缺点：降低了吞吐量
+
+   - Confirm模式
+
+   
