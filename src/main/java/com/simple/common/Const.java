@@ -30,4 +30,10 @@ public class Const {
         String CONFIRM_QUEUE_NAME_1 = "CONFIRM_QUEUE_NAME_1";
         String CONFIRM_QUEUE_NAME_2 = "CONFIRM_QUEUE_NAME_2";
     }
+
+    public interface SpringBootRabbitMq{
+        String SPRING_BOOT_QUEUE_NAME = "SPRING_BOOT_QUEUE_NAME";
+        String SPRING_BOOT_EXCHANGE_NAME = "SPRING_BOOT_EXCHANGE_NAME";
+        String SPRING_BOOT_ROUTING_KEY = " SPRING_BOOT_ROUTING_KEY";
+    }
 }

@@ -5,9 +5,7 @@ import com.simple.util.RedisPoolUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.test.context.junit4.SpringRunner;
 import redis.clients.jedis.Jedis;
 
@@ -15,10 +13,6 @@ import redis.clients.jedis.Jedis;
 @SpringBootTest
 @Slf4j
 public class StudyApplicationTests {
-
-    @Autowired
-    private JavaMailSender javaMailSender;
-
 
     @Test
     public void test() {
@@ -66,6 +60,5 @@ public class StudyApplicationTests {
         int a = (int)(Math.random()*(9999-1000+1)+1000);
         System.out.println(a);
     }
-
 
 }
