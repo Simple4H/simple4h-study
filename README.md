@@ -151,5 +151,5 @@
 
 ### Spring Boot整合RabbitMq--[v4.1](https://github.com/simplecxm/SimpleStudy/tree/v4.1)
 
-![Spring-Boot-RabbitMq](https://github.com/simplecxm/SimpleStudy/blob/v4.0/src/main/resources/img/Spring-Boot-RabbitMq.gif)
+![Spring-Boot-RabbitMq](https://github.com/simplecxm/SimpleStudy/blob/v4.1/src/main/resources/img/Spring-Boot-RabbitMq.gif)
 
