@@ -1,6 +1,4 @@
-# SimpleStudy
-
-[TOC]
+# SimpleStudy--不断学习新的技能
 
 ### 复习Mybatis--[v1.0](https://github.com/simplecxm/SimpleStudy/tree/v1.0)
 
@@ -10,7 +8,7 @@
 
 ------
 
-### 复习Redis--v2.0
+### 复习Redis--[v2.0](https://github.com/simplecxm/SimpleStudy/tree/v2.0)
 1. ##### Redis
 
    - 配置Redis连接池
@@ -23,7 +21,7 @@
 
 ------
 
-### 验证码实现--v3.0
+### 验证码实现--[v3.0](https://github.com/simplecxm/SimpleStudy/tree/v3.0)
 
 1. ##### 使用技术
 
@@ -42,7 +40,7 @@
 
 ------
 
-### 学习RabbitMq--v4.0
+### 学习RabbitMq--[v4.0](https://github.com/simplecxm/SimpleStudy/tree/v4.0)
 
 1. ##### RabbitMq的简单连接
 
@@ -154,7 +152,7 @@
 
 ------
 
-### Spring Boot整合RabbitMq--v4.1
+### Spring Boot整合RabbitMq--[v4.1](https://github.com/simplecxm/SimpleStudy/tree/v4.1)
 
 ![Spring-Boot-RabbitMq](https://github.com/simplecxm/SimpleStudy/blob/v4.1/src/main/resources/img/Spring-Boot-RabbitMq.gif)
 
