@@ -1,4 +1,4 @@
-package com.simple.tx;
+package com.simple.rabbit.comfirm;
 
 import com.rabbitmq.client.*;
 import com.simple.common.Const;
@@ -8,14 +8,19 @@ import lombok.extern.slf4j.Slf4j;
 import java.io.IOException;
 import java.util.concurrent.TimeoutException;
 
-@Slf4j
-public class Get {
+/**
+ * Create by S I M P L E on 2018/05/24 18:25:20
+ */
 
+@Slf4j
+public class Get2 {
     public static void main(String[] args) throws IOException, TimeoutException {
         Connection connection = RabbitmqConnection.getConnection();
         Channel channel = connection.createChannel();
-        channel.queueDeclare(Const.RABBITMQ.TX_QUEUE_NAME, false, false, false, null);
-        channel.basicConsume(Const.RABBITMQ.TX_QUEUE_NAME, true, new DefaultConsumer(channel) {
+        // 队列声明
+        channel.queueDeclare(Const.RABBITMQ.CONFIRM_QUEUE_NAME_2, false, false, false, null);
+        // 消费者
+        channel.basicConsume(Const.RABBITMQ.CONFIRM_QUEUE_NAME_2, true, new DefaultConsumer(channel) {
             @Override
             public void handleDelivery(String consumerTag, Envelope envelope, AMQP.BasicProperties properties, byte[] body) throws IOException {
                 super.handleDelivery(consumerTag, envelope, properties, body);
@@ -23,7 +28,5 @@ public class Get {
                 log.info("get msg:{}", msg);
             }
         });
-
-
     }
 }

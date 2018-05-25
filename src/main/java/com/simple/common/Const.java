@@ -27,5 +27,7 @@ public class Const {
         String TOPIC_QUEUE_NAME_1 = "TOPIC_QUEUE_NAME_1";
         String TOPIC_QUEUE_NAME_2 = "TOPIC_QUEUE_NAME_2";
         String TX_QUEUE_NAME = "TX_QUEUE_NAME";
+        String CONFIRM_QUEUE_NAME_1 = "CONFIRM_QUEUE_NAME_1";
+        String CONFIRM_QUEUE_NAME_2 = "CONFIRM_QUEUE_NAME_2";
     }
 }

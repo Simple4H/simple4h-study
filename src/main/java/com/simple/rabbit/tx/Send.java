@@ -1,4 +1,4 @@
-package com.simple.tx;
+package com.simple.rabbit.tx;
 
 import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.Connection;

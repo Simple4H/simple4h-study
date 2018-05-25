@@ -126,11 +126,26 @@
 
      ![AMQP](https://github.com/simplecxm/SimpleStudy/blob/v4.0/src/main/resources/img/Tx.gif)
 
-     - txSelect：将当前channel设置成transition模式。
-     - txCommit：用于提交事务。
-     - txRollback：用于回滚事务
+     - txSelect()：将当前channel设置成transition模式。
+     - txCommit()：用于提交事务。
+     - txRollback()：用于回滚事务
      - 缺点：降低了吞吐量
 
    - Confirm模式
+
+     - confirmSelect()
+       1. 普通 waitForConfirms()，一条
+
+          ![Comfirm-Singleton](https://github.com/simplecxm/SimpleStudy/blob/v4.0/src/main/resources/img/Comfirm-Singleton.gif)
+
+       2. 批量 waitForComirms(),   多条。一旦有一条错误，全部返回。
+
+          ![Comfirm-More](https://github.com/simplecxm/SimpleStudy/blob/v4.0/src/main/resources/img/Comfirm-More.gif)
+
+       3. 异步confirm模式，提供一个回调方法
+
+     - 最大的优点就是异步！
+
+     
 
    
