@@ -1,6 +1,6 @@
 # SimpleStudy
 
-## 不断学习新的技能！
+[TOC]
 
 ### 复习Mybatis--[v1.0](https://github.com/simplecxm/SimpleStudy/tree/v1.0)
 
@@ -152,10 +152,11 @@
 
      - 最大的优点就是异步！
 
-
 ------
 
 ### Spring Boot整合RabbitMq--v4.1
 
-![Spring-Boot-RabbitMq](https://github.com/simplecxm/SimpleStudy/blob/v4.0/src/main/resources/img/Spring-Boot-RabbitMq.gif)
+![Spring-Boot-RabbitMq](https://github.com/simplecxm/SimpleStudy/blob/v4.1/src/main/resources/img/Spring-Boot-RabbitMq.gif)
+
+
 
