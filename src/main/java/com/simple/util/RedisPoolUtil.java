@@ -23,6 +23,21 @@ public class RedisPoolUtil {
         return result;
     }
 
+    public static Long setnx(String key, String value) {
+        Jedis jedis = null;
+        Long result;
+        try {
+            jedis = RedisPool.getJedis();
+            result = jedis.setnx(key, value);
+        } catch (Exception e) {
+            log.error("setnx key:{} value:{} error", key, value, e);
+            RedisPool.close(jedis);
+            return null;
+        }
+        RedisPool.close(jedis);
+        return result;
+    }
+
     //删除一个key
     public static Long del(String key) {
         Jedis jedis = null;
