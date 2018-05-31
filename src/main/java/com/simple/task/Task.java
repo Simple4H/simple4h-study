@@ -20,12 +20,6 @@ import java.util.Date;
 @Slf4j
 public class Task {
 
-//    @Scheduled(cron = "*/1 * * * * ?")
-//    public void task(){
-//        Date closeTime = DateUtils.addDays(new Date(),-1);
-//        log.info("close time:{}",closeTime);
-//    }
-
     @Autowired
     private IOrderService iOrderService;
 
