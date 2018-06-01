@@ -9,6 +9,10 @@ public class Const {
         int CHECK_CODE = 60 * 5;
     }
 
+    public interface RedissonLock{
+        String REDISSON_LOCK="REDISSON_LOCK";
+    }
+
     public interface Role {
         int ROLE_CUSTOMER = 0;
         int ROLE_ADMIN = 1;
