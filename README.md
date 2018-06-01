@@ -156,5 +156,15 @@
 
 ![Spring-Boot-RabbitMq](https://github.com/simplecxm/SimpleStudy/blob/v4.1/src/main/resources/img/Spring-Boot-RabbitMq.gif)
 
+### 任务计时器--[v5.0](https://github.com/simplecxm/SimpleStudy/tree/v5.0)
 
+- 简单的定时器
+
+- 分布式锁（Redisson）
+
+  - 可重入锁
+
+  - RedissonLock
+
+    ![RedissonLock.gif](https://github.com/simplecxm/SimpleStudy/blob/v4.1/src/main/resources/img/RedissonLock.gif)
 
