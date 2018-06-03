@@ -34,7 +34,7 @@ public class Task {
         RLock rLock = redissonConfig.getRedisson().getLock(Const.RedissonLock.REDISSON_LOCK);
         boolean getLock = false;
         try {
-            if (getLock = rLock.tryLock(2, 5, TimeUnit.SECONDS)) {
+            if (getLock = rLock.tryLock(0, 50, TimeUnit.SECONDS)) {
                 log.info("获取到了分布式锁:{},ThreadName:{}",Const.RedissonLock.REDISSON_LOCK,Thread.currentThread().getName());
                 ServerResponse serverResponse = iOrderService.getCloseOrderList(-1);
                 log.info("返回值:{}",serverResponse);
