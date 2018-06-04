@@ -165,13 +165,18 @@
             <version>3.7.0</version>
         </dependency>
 
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>24.1-jre</version>
+        </dependency>
+
         <!--&lt;!&ndash; https://mvnrepository.com/artifact/com.fasterxml.jackson.dataformat/jackson-dataformat-avro &ndash;&gt;-->
         <!--<dependency>-->
             <!--<groupId>com.fasterxml.jackson.dataformat</groupId>-->
             <!--<artifactId>jackson-dataformat-avro</artifactId>-->
             <!--<version>2.9.5</version>-->
         <!--</dependency>-->
-
 
     </dependencies>
 
