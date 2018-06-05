@@ -11,12 +11,12 @@ public class Escape {
 
     private int thisCanBeEscape = 0;
 
-    public Escape() {
+    private Escape() {
         new InnerClass();
     }
 
     public class InnerClass {
-        public InnerClass() {
+        InnerClass() {
             log.info("{}", Escape.this.thisCanBeEscape);
         }
     }

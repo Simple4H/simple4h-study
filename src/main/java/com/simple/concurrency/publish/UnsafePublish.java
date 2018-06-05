@@ -14,7 +14,7 @@ public class UnsafePublish {
     private String[] states = {"a", "b", "c"};
 
 
-    public String[] getStates() {
+    private String[] getStates() {
         return states;
     }
 
