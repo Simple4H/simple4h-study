@@ -2,17 +2,17 @@
 
 目录
 
-[复习Mybatis](#复习Mybatis--[v1.0](https://github.com/simplecxm/SimpleStudy/tree/v1.0))
+[复习Mybatis](#复习Mybatis)
 
-[复习Redis](#复习Redis--[v2.0](https://github.com/simplecxm/SimpleStudy/tree/v2.0))
+[复习Redis](#复习Redis )
 
-[验证码实现](#验证码实现--[v3.0](https://github.com/simplecxm/SimpleStudy/tree/v3.0))
+[验证码实现](#验证码实现)
 
-[学习RabbitMq](#学习RabbitMq--[v4.0](https://github.com/simplecxm/SimpleStudy/tree/v4.0))
+[学习RabbitMq](#学习RabbitMq)
 
-[Spring Boot整合RabbitMq](#Spring Boot整合RabbitMq--[v4.1](https://github.com/simplecxm/SimpleStudy/tree/v4.1))
+[Spring Boot整合RabbitMq](#Spring Boot整合RabbitMq)
 
-[任务计时器](任务计时器--[v5.0](https://github.com/simplecxm/SimpleStudy/tree/v5.0)) 
+[任务计时器](任务计时器) 
 
 ### 复习Mybatis--[v1.0](https://github.com/simplecxm/SimpleStudy/tree/v1.0)
 
