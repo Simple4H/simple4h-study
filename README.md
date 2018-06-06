@@ -2,17 +2,19 @@
 
 目录
 
-[复习Mybatis](#复习Mybatis)
+[复习Mybatis](#复习Mybatis--v1.0)
 
-[复习Redis](#复习Redis )
+[复习Redis](#复习Redis--v2.0 )
 
-[验证码实现](#验证码实现)
+[验证码实现](#验证码实现--v3.0)
 
-[学习RabbitMq](#学习RabbitMq)
+[学习RabbitMq](#学习RabbitMq--v4.0)
 
-[Spring Boot整合RabbitMq](#Spring Boot整合RabbitMq)
+[Spring Boot整合RabbitMq](#Spring Boot整合RabbitMq--v4.1)
 
-[任务计时器](任务计时器) 
+[任务计时器](#任务计时器--v5.0) 
+
+[并发编程与高并发](#并发编程与高并发v6.0)
 
 ### 复习Mybatis--[v1.0](https://github.com/simplecxm/SimpleStudy/tree/v1.0)
 
