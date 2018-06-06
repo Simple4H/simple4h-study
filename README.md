@@ -1,20 +1,20 @@
 # SimpleStudy--不断学习新的技能
 
-目录
+#### **目录**
 
-[复习Mybatis](#复习mybatis--v10)
+**[复习Mybatis--v1.0](#复习mybatis--v10)**
 
-[复习Redis](#复习redis--v20)
+**[复习Redis--v2.0](#复习redis--v20)**
 
-[验证码实现](#验证码实现--v30)
+**[验证码实现--v3.0](#验证码实现--v30)**
 
-[学习RabbitMq](#学习rabbitmq--v40)
+**[学习RabbitMq--v4.0](#学习rabbitmq--v40)**
 
-[Spring Boot整合RabbitMq](#spring-boot整合rabbitmq--v41)
+**[Spring Boot整合RabbitMq--v4.1](#spring-boot整合rabbitmq--v41)**
 
-[任务计时器](#任务计时器--v50) 
+**[任务计时器--v5.0](#任务计时器--v50)** 
 
-[并发编程与高并发](#并发编程与高并发--v60)
+**[并发编程与高并发--v6.0](#并发编程与高并发--v60)**
 
 ### 复习Mybatis--[v1.0](https://github.com/simplecxm/SimpleStudy/tree/v1.0)
 
@@ -355,5 +355,3 @@
     1. 分布式任务系统--elastic-job+zookeeper
     2. 主备--apachecurator + zookeeper分布式锁
     3. 监控报警机制
-
-### Redis进阶--[v7.0](https://github.com/simplecxm/SimpleStudy/tree/v7.0)
