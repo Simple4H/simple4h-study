@@ -30,16 +30,20 @@ public class UserController {
     public ServerResponse login(String username, String password, HttpSession session) {
         ServerResponse result = iUserService.login(username, password);
         if (result.isSuccess()) {
-            session.setAttribute(Const.CURRENT_USER, result);
+            session.setAttribute(Const.CURRENT_USER, result.getData());
             return result;
         }
-        return null;
+        return result;
     }
 
     @RequestMapping(value = "get_info.do", method = RequestMethod.GET)
     @ResponseBody
     public ServerResponse getInfo(HttpSession session) {
-        return ServerResponse.createBySuccess("成功", session.getAttribute(Const.CURRENT_USER));
+        User user = (User) session.getAttribute(Const.CURRENT_USER);
+        if (user != null) {
+            return ServerResponse.createBySuccess("成功", user);
+        }
+        return ServerResponse.createByErrorMessage("请登录");
     }
 
     // redis login
@@ -60,6 +64,9 @@ public class UserController {
         String loginToken = CookieUtil.readLoginToken(request);
         String userJson = RedisPoolUtil.get(loginToken);
         User user = JsonUtil.string2Obj(userJson, User.class);
-        return ServerResponse.createBySuccess("获取成功", user);
+        if(user != null){
+            return ServerResponse.createBySuccess("获取成功", user);
+        }
+        return ServerResponse.createByErrorMessage("请登录");
     }
 }
