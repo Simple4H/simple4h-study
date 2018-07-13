@@ -14,7 +14,7 @@ public class CookieUtil {
     private final static String COOKIE_DOMAIN = "localhost";
 
     // cookie名字
-    private final static String COOKIE_NAME = "simplecxm_login_redis";
+    private final static String COOKIE_NAME = "simple_login_redis";
 
     // 写入cookie
     public static void writeLoginToken(HttpServletResponse response, String token) {
