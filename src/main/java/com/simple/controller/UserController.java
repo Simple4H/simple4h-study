@@ -57,7 +57,7 @@ public class UserController {
         }
         return response;
     }
-
+    // 获取用户信息
     @RequestMapping(value = "redis_get_info.do", method = RequestMethod.GET)
     @ResponseBody
     public ServerResponse redisGetInfo(HttpServletRequest request) {
