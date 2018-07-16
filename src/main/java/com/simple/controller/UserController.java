@@ -36,6 +36,7 @@ public class UserController {
         return result;
     }
 
+    // 获取用户信息
     @RequestMapping(value = "get_info.do", method = RequestMethod.GET)
     @ResponseBody
     public ServerResponse getInfo(HttpSession session) {
