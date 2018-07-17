@@ -24,7 +24,7 @@ public class UserController {
     @Autowired
     private IUserService iUserService;
 
-    //  Spring Session框架集成
+    // Spring Session框架集成
     @RequestMapping(value = "login.do", method = RequestMethod.GET)
     @ResponseBody
     public ServerResponse login(String username, String password, HttpSession session) {
