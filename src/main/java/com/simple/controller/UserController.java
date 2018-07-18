@@ -47,7 +47,7 @@ public class UserController {
         return ServerResponse.createByErrorMessage("请登录");
     }
 
-    // redis login
+    // redis 登录
     @RequestMapping(value = "redis_login.do", method = RequestMethod.GET)
     @ResponseBody
     public ServerResponse redisLogin(String username, String password, HttpServletResponse httpServletResponse, HttpSession session) {
