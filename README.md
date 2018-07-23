@@ -357,4 +357,4 @@
     1. 分布式任务系统--elastic-job+zookeeper
     2. 主备--apachecurator + zookeeper分布式锁
     3. 监控报警机制
-科目一 YES
+todo 负载均衡
