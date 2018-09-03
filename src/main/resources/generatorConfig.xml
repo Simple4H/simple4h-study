@@ -8,7 +8,7 @@
 <generatorConfiguration>
 
     <!--指定特定数据库的jdbc驱动jar包的位置 -->
-    <classPathEntry location="F:\jar\mysql-connector-java-5.1.38.jar"/>
+    <classPathEntry location="/Users/simple/developer/mysql-connector-java-5.1.46.jar"/>
 
     <context id="default" targetRuntime="MyBatis3">
 
@@ -23,7 +23,7 @@
                 driverClass="com.mysql.jdbc.Driver"
                 connectionURL="jdbc:mysql://localhost:3306/db_test"
                 userId="root"
-                password="crescent1">
+                password="Crescent1!">
         </jdbcConnection>
 
 
