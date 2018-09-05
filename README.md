@@ -16,7 +16,7 @@
 
 [并发编程与高并发--v6.0](#并发编程与高并发--v60)
 
-[SpringBoot邮件--v7.0](#SpringBoot邮件--v70)
+[SpringBoot邮件--v7.0](#springboot邮件--v70)
 
 ------
 
