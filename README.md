@@ -366,5 +366,17 @@
 
 ### SpringBoot邮件--[v7.0](https://github.com/simplecxm/SimpleStudy/tree/v7.0)
 
+1. #### 简单文本发送
+
+   ​	在通过一些邮件相关的配置后，主要使用JavaMailSender类和SimpleMailMessage。总的来说，在Spring Boot下使用邮件发送是比较方便的。
+
+   ​	通过测试类发送邮件
+
+   ​	![发送邮件](https://github.com/simplecxm/SimpleStudy/blob/v7.0/src/main/resources/img/v8.0-2.png)
+
+   ​	在目标邮箱成功接收到邮件
+
+   ​	![接收邮件](https://github.com/simplecxm/SimpleStudy/blob/v7.0/src/main/resources/img/v8.0-1.png)
+
 ------
 
