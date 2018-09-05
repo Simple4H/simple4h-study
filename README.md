@@ -16,6 +16,8 @@
 
 [并发编程与高并发--v6.0](#并发编程与高并发--v60)
 
+[SpringBoot邮件--v7.0](#SpringBoot邮件--v70)
+
 ------
 
 ### 复习Mybatis--[v1.0](https://github.com/simplecxm/SimpleStudy/tree/v1.0)
@@ -168,11 +170,11 @@
 
      - 最大的优点就是异步！
 
-------
-
 ### Spring Boot整合RabbitMq--[v4.1](https://github.com/simplecxm/SimpleStudy/tree/v4.1)
 
 ![Spring-Boot-RabbitMq](https://github.com/simplecxm/SimpleStudy/blob/v4.1/src/main/resources/img/Spring-Boot-RabbitMq.gif)
+
+------
 
 ### 任务计时器--[v5.0](https://github.com/simplecxm/SimpleStudy/tree/v5.0)
 
@@ -185,6 +187,8 @@
   - RedissonLock
 
     ![RedissonLock.gif](https://github.com/simplecxm/SimpleStudy/blob/v5.0/src/main/resources/img/RedissonLock.gif)
+
+------
 
 ### 并发编程与高并发--[v6.0](https://github.com/simplecxm/SimpleStudy/tree/v6.0)
 
@@ -357,3 +361,10 @@
     1. 分布式任务系统--elastic-job+zookeeper
     2. 主备--apachecurator + zookeeper分布式锁
     3. 监控报警机制
+
+------
+
+### SpringBoot邮件--[v7.0](https://github.com/simplecxm/SimpleStudy/tree/v7.0)
+
+------
+
