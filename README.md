@@ -418,13 +418,13 @@
 
    模板有很多，但是我比较喜欢ThymeLeaf。主要是通过thymeleaf生成模板（应该是解析生成HTML-->String）最后使用html的格式发送邮件。
 
-   ​	通过测试类发送邮件
+   通过测试类发送邮件
 
-      	![发送邮件](https://github.com/simplecxm/SimpleStudy/blob/v7.0/src/main/resources/img/v8.0-9.png)
+    ![发送邮件](https://github.com/simplecxm/SimpleStudy/blob/v7.0/src/main/resources/img/v8.0-7.png)
 
-      	在目标邮箱成功接收到邮件
+   在目标邮箱成功接收到邮件
 
-      	![接收邮件](https://github.com/simplecxm/SimpleStudy/blob/v7.0/src/main/resources/img/v8.0-10.png)
+    ![接收邮件](https://github.com/simplecxm/SimpleStudy/blob/v7.0/src/main/resources/img/v8.0-8.png)
 
 ------
 
