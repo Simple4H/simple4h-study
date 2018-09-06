@@ -392,27 +392,39 @@
 
 3. #### 附件邮邮件发送
 
-   ​	附件发送和Html邮件发送很相似，只要添加一个addAttachment。当然，不仅仅可以添加一个附件，也可以添加多个附件。将多个附件作为数组，然后在添加的时候进行遍历。
+   	附件发送和Html邮件发送很相似，只要添加一个addAttachment。当然，不仅仅可以添加一个附件，也可以添加多个附件。将多个附件作为数组，然后在添加的时候进行遍历。
 
-   ​	通过测试类发送邮件
+   	通过测试类发送邮件
 
-   ​	![发送邮件](https://github.com/simplecxm/SimpleStudy/blob/v7.0/src/main/resources/img/v8.0-5.png)
+   	![发送邮件](https://github.com/simplecxm/SimpleStudy/blob/v7.0/src/main/resources/img/v8.0-5.png)
 
-   ​	在目标邮箱成功接收到邮件
+   	在目标邮箱成功接收到邮件
 
-   ​	![接收邮件](https://github.com/simplecxm/SimpleStudy/blob/v7.0/src/main/resources/img/v8.0-6.png)
+   	![接收邮件](https://github.com/simplecxm/SimpleStudy/blob/v7.0/src/main/resources/img/v8.0-6.png)
 
 4. #### 图片邮件发送
 
-   ​	在附件邮件的基础上添加一个addInline。需要注意的是，html标签不能写错，写错的话可能邮件里面的图片变成附件。要是想在一封邮件添加多张照片，需要在html中使用多次的<img>标签，同时使用多个addInline。
+   	在附件邮件的基础上添加一个addInline。需要注意的是，html标签不能写错，写错的话可能邮件里面的图片变成附件。要是想在一封邮件添加多张照片，需要在html中使用多次的<img>标签，同时使用多个addInline。
 
-   ​	通过测试类发送邮件
+   	通过测试类发送邮件
 
-   ​	![发送邮件](https://github.com/simplecxm/SimpleStudy/blob/v7.0/src/main/resources/img/v8.0-7.png)
+   	![发送邮件](https://github.com/simplecxm/SimpleStudy/blob/v7.0/src/main/resources/img/v8.0-7.png)
 
-   ​	在目标邮箱成功接收到邮件
+   	在目标邮箱成功接收到邮件
 
-   ​	![接收邮件](https://github.com/simplecxm/SimpleStudy/blob/v7.0/src/main/resources/img/v8.0-8.png)
+   	![接收邮件](https://github.com/simplecxm/SimpleStudy/blob/v7.0/src/main/resources/img/v8.0-8.png)
+
+5. #### 邮件模板
+
+   ​	模板有很多，但是我比较喜欢ThymeLeaf。主要是通过thymeleaf生成模板（应该是解析生成HTML-->String）最后使用html的格式发送邮件。
+
+   	通过测试类发送邮件
+
+      	![发送邮件](https://github.com/simplecxm/SimpleStudy/blob/v7.0/src/main/resources/img/v8.0-9.png)
+
+      	在目标邮箱成功接收到邮件
+
+      	![接收邮件](https://github.com/simplecxm/SimpleStudy/blob/v7.0/src/main/resources/img/v8.0-10.png)
 
 ------
 

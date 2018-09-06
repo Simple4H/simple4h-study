@@ -7,6 +7,8 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
+import org.thymeleaf.TemplateEngine;
+import org.thymeleaf.context.Context;
 
 import javax.mail.MessagingException;
 
@@ -17,6 +19,9 @@ public class StudyApplicationTests {
 
     @Autowired
     private IEmailService iEmailService;
+
+    @Autowired
+    private TemplateEngine templateEngine;
 
     @Test
     public void SendSimpleEmail() {
@@ -56,5 +61,17 @@ public class StudyApplicationTests {
         iEmailService.sendImageEmail("crescentcxm@gmail.com",
                 "这是带有图片的邮件",
                 content, imgPath, imgId);
+    }
+
+    @Test
+    public void TemplateEmail() throws MessagingException {
+        // 可以在context设置一些值
+        Context context = new Context();
+        // 生成Html
+        String emailContent = templateEngine.process("EmailTemplate",context);
+        // 调用发送html邮件的接口
+        iEmailService.sendHtmlEmail("crescentcxm@gmail.com",
+                "这是封模板邮件",
+                emailContent);
     }
 }
