@@ -2,6 +2,7 @@ package com.simple.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.core.io.FileSystemResource;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.MimeMessageHelper;
@@ -9,6 +10,7 @@ import org.springframework.stereotype.Service;
 
 import javax.mail.MessagingException;
 import javax.mail.internet.MimeMessage;
+import java.io.File;
 
 /**
  * Create By S I M P L E On 2018/09/05 21:16:57
@@ -38,13 +40,29 @@ public class IEmailService {
         javaMailSender.send(simpleMailMessage);
     }
 
+    // Html邮件
     public void sendHtmlEmail(String to, String subject, String content) throws MessagingException {
         MimeMessage mimeMessage = javaMailSender.createMimeMessage();
-        MimeMessageHelper mimeMessageHelper = new MimeMessageHelper(mimeMessage,true);
+        MimeMessageHelper mimeMessageHelper = new MimeMessageHelper(mimeMessage, true);
         mimeMessageHelper.setFrom(myself);
         mimeMessageHelper.setTo(to);
         mimeMessageHelper.setSubject(subject);
-        mimeMessageHelper.setText(content,true);
+        mimeMessageHelper.setText(content, true);
+        javaMailSender.send(mimeMessage);
+    }
+
+    // 附件邮件
+    public void sendAttachmentEmail(String to, String subject, String content, String filePath) throws MessagingException {
+        MimeMessage mimeMessage = javaMailSender.createMimeMessage();
+        MimeMessageHelper mimeMessageHelper = new MimeMessageHelper(mimeMessage, true);
+        mimeMessageHelper.setFrom(myself);
+        mimeMessageHelper.setTo(to);
+        mimeMessageHelper.setSubject(subject);
+        mimeMessageHelper.setText(content, true);
+        // 附件
+        FileSystemResource fileSystemResource = new FileSystemResource(new File(filePath));
+        String fileName = fileSystemResource.getFilename();
+        mimeMessageHelper.addAttachment(fileName, fileSystemResource);
         javaMailSender.send(mimeMessage);
     }
 }

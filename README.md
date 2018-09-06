@@ -368,27 +368,40 @@
 
 1. #### 简单文本发送
 
-   ​	在通过一些邮件相关的配置后，主要使用JavaMailSender类和SimpleMailMessage。总的来说，在Spring Boot下使用邮件发送是比较方便的。
+   	在通过一些邮件相关的配置后，主要使用JavaMailSender类和SimpleMailMessage。总的来说，在Spring Boot下使用邮件发送是比较方便的。
 
-   ​	通过测试类发送邮件
+   	通过测试类发送邮件
 
-   	![发送邮件](https://github.com/simplecxm/SimpleStudy/blob/v7.0/src/main/resources/img/v8.0-2.png)
+   ​	![发送邮件](https://github.com/simplecxm/SimpleStudy/blob/v7.0/src/main/resources/img/v8.0-2.png)
 
-   ​	在目标邮箱成功接收到邮件
+   	在目标邮箱成功接收到邮件
 
-   ​	![接收邮件](https://github.com/simplecxm/SimpleStudy/blob/v7.0/src/main/resources/img/v8.0-1.png)
+   	![接收邮件](https://github.com/simplecxm/SimpleStudy/blob/v7.0/src/main/resources/img/v8.0-1.png)
 
 2. #### Html邮件发送
 
-   ​	相对简单的文本发送，HTML邮件在实际上使用的更加的多。使用上和简单文本发送没有太大的区别，以后要用的时候来看一就差不多了。
+   	相对简单的文本发送，HTML邮件在实际上使用的更加的多。使用上和简单文本发送没有太大的区别，以后要用的时候来看一就差不多了。
 
    ​	通过测试类发送邮件
 
-   ​	![接收邮件](https://github.com/simplecxm/SimpleStudy/blob/v7.0/src/main/resources/img/v8.0-3.png)
+   ​	![发送邮件](https://github.com/simplecxm/SimpleStudy/blob/v7.0/src/main/resources/img/v8.0-3.png)
 
    ​	在目标邮箱成功接收到邮件
 
    ​	![接收邮件](https://github.com/simplecxm/SimpleStudy/blob/v7.0/src/main/resources/img/v8.0-4.png)
+
+3. #### 附件邮箱发送
+
+   ​	附件发送和Html邮件发送很相似，只要添加一个addAttachment。
+
+   ​	通过测试类发送邮件
+
+   ​	![发送邮件](https://github.com/simplecxm/SimpleStudy/blob/v7.0/src/main/resources/img/v8.0-5.png)
+
+   ​	在目标邮箱成功接收到邮件
+
+   ​	![接收邮件](https://github.com/simplecxm/SimpleStudy/blob/v7.0/src/main/resources/img/v8.0-6.png)
+
 
 ------
 

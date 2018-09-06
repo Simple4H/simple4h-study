@@ -37,4 +37,13 @@ public class StudyApplicationTests {
                 content);
     }
 
+    @Test
+    public void sendAttachEmail() throws MessagingException {
+        String filePath = "/Users/simple/Downloads/7bd8b645gy1fuz1sd2chwj20k072snpd.jpg";
+        iEmailService.sendAttachmentEmail("crescentcxm@gmail.com",
+                "邮箱附件测试",
+                "如果你收到这条邮件而且看到附件，说明测试成功!",
+                filePath);
+    }
+
 }
