@@ -420,11 +420,11 @@
 
    通过测试类发送邮件
 
-    ![发送邮件](https://github.com/simplecxm/SimpleStudy/blob/v7.0/src/main/resources/img/v8.0-7.png)
+    ![发送邮件](https://github.com/simplecxm/SimpleStudy/blob/v7.0/src/main/resources/img/v8.0-9.png)
 
    在目标邮箱成功接收到邮件
 
-    ![接收邮件](https://github.com/simplecxm/SimpleStudy/blob/v7.0/src/main/resources/img/v8.0-8.png)
+    ![接收邮件](https://github.com/simplecxm/SimpleStudy/blob/v7.0/src/main/resources/img/v8.0-10.png)
 
 ------
 
