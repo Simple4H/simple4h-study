@@ -46,4 +46,15 @@ public class StudyApplicationTests {
                 filePath);
     }
 
+    @Test
+    public void sendImageEmail() throws MessagingException {
+        String imgPath = "/Users/simple/Downloads/1536158502498.jpg";
+        String imgId = "simple-001";
+        String content = "<html><body>" +
+                "这是有图片的邮件:<img src=\'cid:" + imgId + "\'></img>" +
+                "</body></html>";
+        iEmailService.sendImageEmail("crescentcxm@gmail.com",
+                "这是带有图片的邮件",
+                content, imgPath, imgId);
+    }
 }

@@ -65,4 +65,20 @@ public class IEmailService {
         mimeMessageHelper.addAttachment(fileName, fileSystemResource);
         javaMailSender.send(mimeMessage);
     }
+
+    // 图片邮件
+    public void sendImageEmail(String to, String subject, String content, String imgPath, String imgId) throws MessagingException {
+        MimeMessage mimeMessage = javaMailSender.createMimeMessage();
+
+        MimeMessageHelper mimeMessageHelper = new MimeMessageHelper(mimeMessage, true);
+        mimeMessageHelper.setFrom(myself);
+        mimeMessageHelper.setTo(to);
+        mimeMessageHelper.setSubject(subject);
+        mimeMessageHelper.setText(content, true);
+        FileSystemResource fileSystemResource = new FileSystemResource(new File(imgPath));
+        // 注意，这里需要调用的是addInline
+        mimeMessageHelper.addInline(imgId, fileSystemResource);
+        javaMailSender.send(mimeMessage);
+
+    }
 }

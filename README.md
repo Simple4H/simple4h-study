@@ -366,7 +366,7 @@
 
 ### SpringBoot邮件--[v7.0](https://github.com/simplecxm/SimpleStudy/tree/v7.0)
 
-1. #### 简单文本发送
+1. #### 简单文本邮件发送
 
    	在通过一些邮件相关的配置后，主要使用JavaMailSender类和SimpleMailMessage。总的来说，在Spring Boot下使用邮件发送是比较方便的。
 
@@ -390,9 +390,9 @@
 
    ​	![接收邮件](https://github.com/simplecxm/SimpleStudy/blob/v7.0/src/main/resources/img/v8.0-4.png)
 
-3. #### 附件邮箱发送
+3. #### 附件邮邮件发送
 
-   ​	附件发送和Html邮件发送很相似，只要添加一个addAttachment。
+   ​	附件发送和Html邮件发送很相似，只要添加一个addAttachment。当然，不仅仅可以添加一个附件，也可以添加多个附件。将多个附件作为数组，然后在添加的时候进行遍历。
 
    ​	通过测试类发送邮件
 
@@ -402,6 +402,17 @@
 
    ​	![接收邮件](https://github.com/simplecxm/SimpleStudy/blob/v7.0/src/main/resources/img/v8.0-6.png)
 
+4. #### 图片邮件发送
+
+   ​	在附件邮件的基础上添加一个addInline。需要注意的是，html标签不能写错，写错的话可能邮件里面的图片变成附件。要是想在一封邮件添加多张照片，需要在html中使用多次的<img>标签，同时使用多个addInline。
+
+   ​	通过测试类发送邮件
+
+   ​	![发送邮件](https://github.com/simplecxm/SimpleStudy/blob/v7.0/src/main/resources/img/v8.0-7.png)
+
+   ​	在目标邮箱成功接收到邮件
+
+   ​	![接收邮件](https://github.com/simplecxm/SimpleStudy/blob/v7.0/src/main/resources/img/v8.0-8.png)
 
 ------
 
