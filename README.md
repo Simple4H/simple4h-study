@@ -372,11 +372,23 @@
 
    ​	通过测试类发送邮件
 
-   ​	![发送邮件](https://github.com/simplecxm/SimpleStudy/blob/v7.0/src/main/resources/img/v8.0-2.png)
+   	![发送邮件](https://github.com/simplecxm/SimpleStudy/blob/v7.0/src/main/resources/img/v8.0-2.png)
 
    ​	在目标邮箱成功接收到邮件
 
    ​	![接收邮件](https://github.com/simplecxm/SimpleStudy/blob/v7.0/src/main/resources/img/v8.0-1.png)
+
+2. #### Html邮件发送
+
+   ​	相对简单的文本发送，HTML邮件在实际上使用的更加的多。使用上和简单文本发送没有太大的区别，以后要用的时候来看一就差不多了。
+
+   ​	通过测试类发送邮件
+
+   ​	![接收邮件](https://github.com/simplecxm/SimpleStudy/blob/v7.0/src/main/resources/img/v8.0-3.png)
+
+   ​	在目标邮箱成功接收到邮件
+
+   ​	![接收邮件](https://github.com/simplecxm/SimpleStudy/blob/v7.0/src/main/resources/img/v8.0-4.png)
 
 ------
 

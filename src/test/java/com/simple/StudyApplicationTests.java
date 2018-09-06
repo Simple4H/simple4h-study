@@ -8,6 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import javax.mail.MessagingException;
+
 @RunWith(SpringRunner.class)
 @SpringBootTest
 @Slf4j
@@ -17,10 +19,22 @@ public class StudyApplicationTests {
     private IEmailService iEmailService;
 
     @Test
-    public void SendSimpleEmail(){
+    public void SendSimpleEmail() {
         iEmailService.sendEmail("crescentcxm@gmail.com",
                 "测试简单邮件发送",
                 "如果你收到这条邮件，说明测试成功!");
+    }
+
+    @Test
+    public void sendHtmlEmail() throws MessagingException {
+        String content = "<html>\n" +
+                "<body>\n" +
+                "<h3>如果你收到这条邮件，说明测试成功!</h3>" +
+                "</body>\n" +
+                "</html>";
+        iEmailService.sendHtmlEmail("crescentcxm@gmail.com",
+                "测试简单邮件发送",
+                content);
     }
 
 }
