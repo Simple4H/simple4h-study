@@ -416,9 +416,9 @@
 
 5. #### 邮件模板
 
-   ​	模板有很多，但是我比较喜欢ThymeLeaf。主要是通过thymeleaf生成模板（应该是解析生成HTML-->String）最后使用html的格式发送邮件。
+   模板有很多，但是我比较喜欢ThymeLeaf。主要是通过thymeleaf生成模板（应该是解析生成HTML-->String）最后使用html的格式发送邮件。
 
-   	通过测试类发送邮件
+   ​	通过测试类发送邮件
 
       	![发送邮件](https://github.com/simplecxm/SimpleStudy/blob/v7.0/src/main/resources/img/v8.0-9.png)
 
