@@ -20,8 +20,8 @@ public class StudyApplicationTests {
     private IUserService iUserService;
 
     @Test
-    public void findAll(){
+    public void findAll() {
         List<User> userList = iUserService.selectAllData();
-        log.warn("User Data:{}",userList);
+        log.warn("User Data:{}", userList);
     }
 }
