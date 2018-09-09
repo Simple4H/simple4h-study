@@ -428,3 +428,126 @@
 
 ------
 
+### Spring Boot JPA
+
+1，首先建立pojo类（entity类）
+
+●注意，需要添加@Entity，同时，在相关字段上添加相关注解。同时需要一个无参构造方法。
+
+```java
+package com.simple.pojo;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import java.io.Serializable;
+
+/**
+ * Create By S I M P L E On 2018/09/09 13:45:56
+ */
+@Entity
+public class User implements Serializable {
+
+    @Id
+    private int id;
+
+    private String username;
+
+    private String password;
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", username='" + username + '\'' +
+                ", password='" + password + '\'' +
+                '}';
+    }
+
+    public User() {
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+}
+```
+
+2，dao层，添加@Repostiory注解，继承JpaRepository<T,ID>。
+
+●注意，这个类是接口类。JpaRepository<T,ID>中，T是指对应实体类，ID指实体类中对应的主键。
+
+```java
+package com.simple.dao;
+
+import com.simple.pojo.User;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+/**
+ * Create By S I M P L E On 2018/09/09 14:31:16
+ */
+@Repository
+public interface UserDao extends JpaRepository<User, Integer> {
+}
+```
+
+3，接下来就是常规的service、impl、controller层（这里使用JUint）
+
+●service层中，注入DAO层接口后，就可以调用内置的许多方法（增删改查）。
+
+```java
+package com.simple;
+
+import com.simple.pojo.User;
+import com.simple.service.IUserService;
+import lombok.extern.slf4j.Slf4j;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.junit4.SpringRunner;
+
+import java.util.List;
+
+@RunWith(SpringRunner.class)
+@SpringBootTest
+@Slf4j
+public class StudyApplicationTests {
+
+    @Autowired
+    private IUserService iUserService;
+
+    @Test
+    public void findAll() {
+        List<User> userList = iUserService.selectAllData();
+        log.warn("User Data:{}", userList);
+    }
+}
+```
+
+4，运行结果
+
+```java
+2018-09-09 14:40:29.792  WARN 1499 --- [           main] com.simple.StudyApplicationTests         : User Data:[User{id=1, username='simple', password='123123'}]
+```
+
