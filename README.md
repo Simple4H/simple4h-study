@@ -18,7 +18,7 @@
 
 [SpringBoot邮件--v7.0](#springboot邮件--v70)
 
-[Spring Boot JPA--v8.0](#spring-boot-邮件--v80)
+[Spring Boot JPA--v8.0](#spring-boot-jpa--v80)
 
 ------
 
