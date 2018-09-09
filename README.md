@@ -18,6 +18,8 @@
 
 [SpringBoot邮件--v7.0](#springboot邮件--v70)
 
+[Spring Boot JPA--v8.0](#spring-boot-邮件--v80)
+
 ------
 
 ### 复习Mybatis--[v1.0](https://github.com/simplecxm/SimpleStudy/tree/v1.0)
@@ -428,7 +430,7 @@
 
 ------
 
-### Spring Boot JPA
+### Spring Boot JPA--[v8.0](https://github.com/simplecxm/SimpleStudy/tree/v8.0)
 
 1，首先建立pojo类（entity类）
 
