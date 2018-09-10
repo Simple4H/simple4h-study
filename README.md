@@ -20,6 +20,8 @@
 
 [Spring Boot JPA--v8.0](#spring-boot-jpa--v80)
 
+[SimpleStudy-2](https://github.com/simplecxm/SimpleStudy-2)
+
 ------
 
 ### 复习Mybatis--[v1.0](https://github.com/simplecxm/SimpleStudy/tree/v1.0)
