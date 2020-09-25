@@ -6,9 +6,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 @MapperScan("com.simple4h.dao")
-public class StudyApplication {
+public class DemoApplication {
 
-    public static void main(String[] args) {
-        SpringApplication.run(StudyApplication.class, args);
-    }
+	public static void main(String[] args) {
+		SpringApplication.run(DemoApplication.class, args);
+	}
+
 }
