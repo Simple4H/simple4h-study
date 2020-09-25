@@ -1,1 +1,26 @@
-
+spring:
+  kafka:
+    #指定kafka代理地址
+    bootstrap-servers: 127.0.0.1:9092
+    #消息生产者配置
+    producer:
+      retries: 0
+      #每次批量发送消息数量
+      batch-size: 16384
+      buffer-memory: 33554432
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    password: 123456
+    lettuce:
+      pool:
+        #连接池最大连接数（使用负值表示没有限制）
+        max-active: 32
+        # 连接池最大阻塞等待时间（使用负值表示没有限制）
+        max-wait: 300ms
+        # 连接池中的最大空闲连接
+        max-idle: 16
+        # 连接池中的最小空闲连接
+        min-idle: 8
