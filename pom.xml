@@ -11,6 +11,7 @@
     <modules>
         <module>demo</module>
         <module>common</module>
+        <module>kafka</module>
     </modules>
 
     <name>study</name>
@@ -29,6 +30,7 @@
         <commons-lang3-version>3.11</commons-lang3-version>
         <alibaba-fastjson-version>1.2.73</alibaba-fastjson-version>
         <google-guava-version>29.0-jre</google-guava-version>
+        <spring-kafka-version>2.5.6.RELEASE</spring-kafka-version>
     </properties>
 
     <dependencyManagement>
@@ -93,6 +95,12 @@
                 <groupId>com.google.guava</groupId>
                 <artifactId>guava</artifactId>
                 <version>${google-guava-version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.kafka</groupId>
+                <artifactId>spring-kafka</artifactId>
+                <version>${spring-kafka-version}</version>
             </dependency>
 
         </dependencies>
