@@ -31,6 +31,8 @@
         <alibaba-fastjson-version>1.2.73</alibaba-fastjson-version>
         <google-guava-version>29.0-jre</google-guava-version>
         <spring-kafka-version>2.5.6.RELEASE</spring-kafka-version>
+        <commons-pool2-version>2.8.1</commons-pool2-version>
+        <maven-surefire-plugin-version>2.22.2</maven-surefire-plugin-version>
     </properties>
 
     <dependencyManagement>
@@ -103,6 +105,19 @@
                 <version>${spring-kafka-version}</version>
             </dependency>
 
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-data-redis</artifactId>
+                <version>${spring-boot-starter-version}</version>
+            </dependency>
+
+            <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-pool2 -->
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-pool2</artifactId>
+                <version>${commons-pool2-version}</version>
+            </dependency>
+
         </dependencies>
     </dependencyManagement>
 
@@ -118,7 +133,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
-                <version>2.22.2</version>
+                <version>${maven-surefire-plugin-version}</version>
                 <configuration>
                     <skipTests>true</skipTests>
                 </configuration>
