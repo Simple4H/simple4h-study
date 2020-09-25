@@ -3,9 +3,11 @@ package com.simple4h.demo;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.ComponentScan;
 
-@SpringBootApplication(scanBasePackages = {"com.simple4h.demo", "com.simple4h.common"})
+@SpringBootApplication
 @MapperScan("com.simple4h.demo")
+@ComponentScan({"com.simple4h.demo", "com.simple4h.common"})
 public class DemoApplication {
 
     public static void main(String[] args) {
