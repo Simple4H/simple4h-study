@@ -439,7 +439,7 @@
 ●注意，需要添加@Entity，同时，在相关字段上添加相关注解。同时需要一个无参构造方法。
 
 ```java
-package com.simple.pojo;
+package com.simple4h.pojo;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -501,9 +501,8 @@ public class User implements Serializable {
 ●注意，这个类是接口类。JpaRepository<T,ID>中，T是指对应实体类，ID指实体类中对应的主键。
 
 ```java
-package com.simple.dao;
+package com.simple4h.dao;
 
-import com.simple.pojo.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
@@ -520,10 +519,8 @@ public interface UserDao extends JpaRepository<User, Integer> {
 ●service层中，注入DAO层接口后，就可以调用内置的许多方法（增删改查）。
 
 ```java
-package com.simple;
+package com.simple4h;
 
-import com.simple.pojo.User;
-import com.simple.service.IUserService;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -552,6 +549,6 @@ public class StudyApplicationTests {
 4，运行结果
 
 ```java
-2018-09-09 14:40:29.792  WARN 1499 --- [           main] com.simple.StudyApplicationTests         : User Data:[User{id=1, username='simple', password='123123'}]
+2018-09-09 14:40:29.792  WARN 1499 --- [           main] com.simple4h.StudyApplicationTests         : User Data:[User{id=1, username='simple', password='123123'}]
 ```
 
