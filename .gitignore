@@ -42,3 +42,4 @@ src/main/.DS_Store
 /demo/target/
 /common/target/
 /kafka/target/
+/sample/target/

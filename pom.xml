@@ -11,7 +11,7 @@
     <modules>
         <module>demo</module>
         <module>common</module>
-        <module>kafka</module>
+        <module>sample</module>
     </modules>
 
     <name>study</name>
