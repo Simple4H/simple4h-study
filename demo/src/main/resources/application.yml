@@ -43,6 +43,15 @@ spring:
         max-idle: 16
         # 连接池中的最小空闲连接
         min-idle: 8
+  rabbitmq:
+    # ip
+    host: 127.0.0.1
+    # 端口
+    port: 5672
+    # 账号
+    username: guest
+    # 密码
+    password: guest
 
 # Mybatis
 mybatis:

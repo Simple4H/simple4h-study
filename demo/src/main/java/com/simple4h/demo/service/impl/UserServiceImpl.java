@@ -3,6 +3,7 @@ package com.simple4h.demo.service.impl;
 import com.alibaba.fastjson.JSONObject;
 import com.simple4h.common.response.ServerResponse;
 import com.simple4h.common.service.IKafkaService;
+import com.simple4h.common.service.IRabbitMqService;
 import com.simple4h.common.service.IRedisService;
 import com.simple4h.demo.dao.UserMapper;
 import com.simple4h.demo.domain.User;
@@ -26,6 +27,9 @@ public class UserServiceImpl implements IUserService {
     @Autowired
     private IRedisService iRedisService;
 
+    @Autowired
+    private IRabbitMqService iRabbitMqService;
+
     @Override
     public ServerResponse<User> getUserInfo(Integer userId) {
         User user = userMapper.selectByPrimaryKey(userId);
@@ -33,6 +37,8 @@ public class UserServiceImpl implements IUserService {
                 JSONObject.toJSONString(user),
                 10000L);
         iKafkaService.sendKafkaDefaultTopicMessage("simple4h");
+
+        iRabbitMqService.sendMsg();
 
         return ServerResponse.createBySuccess(user);
     }

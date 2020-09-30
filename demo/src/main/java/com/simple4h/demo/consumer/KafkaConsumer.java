@@ -1,4 +1,4 @@
-package com.simple4h.demo.kafka;
+package com.simple4h.demo.consumer;
 
 import com.alibaba.fastjson.JSONObject;
 import com.simple4h.common.entity.Message;
@@ -15,7 +15,7 @@ import java.util.Optional;
  */
 @Component
 @Slf4j
-public class KafkaConsume {
+public class KafkaConsumer {
 
     @KafkaListener(topics = {"hello-topic"})
     public void listen(ConsumerRecord<String, String> record) {
