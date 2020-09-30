@@ -15,8 +15,8 @@ public class RabbitMqConsumer {
 
     @RabbitListener(bindings = {
             @QueueBinding(value = @Queue(value = "hhh-queue", durable = "true"),
-            exchange = @Exchange(value = "hhh-topic-exchange", type = ExchangeTypes.TOPIC),
-            key = "hhh-routingKey")})
+                    exchange = @Exchange(value = "hhh-topic-exchange", type = ExchangeTypes.TOPIC),
+                    key = "hhh-routingKey")})
     @RabbitHandler
     public void processDirectMsg(String message) {
         log.info("message:{}", message);
