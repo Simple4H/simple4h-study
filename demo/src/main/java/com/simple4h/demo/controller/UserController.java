@@ -24,4 +24,9 @@ public class UserController {
     public ServerResponse<User> getUserInfo(@PathVariable Integer userId) {
         return iUserService.getUserInfo(userId);
     }
+
+    @GetMapping("get_info")
+    public String getUserInfo(){
+        return "Simple4H";
+    }
 }

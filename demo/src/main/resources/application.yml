@@ -1,8 +1,10 @@
 # Server Port
 server:
-  port: 9080
+  port: 9999
 # Spring
 spring:
+  application:
+    name: demo-service
   datasource:
     url: jdbc:mysql://127.0.0.1:3306/demo?useUnicode=true&characterEncoding=UTF-8&serverTimezone=GMT%2B8&allowPublicKeyRetrieval=true&verifyServerCertificate=false&useSSL=false
     username: root
@@ -52,6 +54,14 @@ spring:
     username: guest
     # 密码
     password: guest
+  cloud:
+    consul:
+      discovery:
+        port: 8500
+        hostname: 127.0.0.1
+        service-name: ${spring.application.name}
+        heartbeat:
+          enabled: true
 
 # Mybatis
 mybatis:

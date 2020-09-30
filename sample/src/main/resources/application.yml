@@ -1,2 +1,13 @@
 server:
-  port: 9090
+  port: 8888
+spring:
+  cloud:
+    consul:
+      discovery:
+        port: 8500
+        hostname: 127.0.0.1
+        service-name: ${spring.application.name}
+        heartbeat:
+          enabled: true
+  application:
+    name: sample-service
