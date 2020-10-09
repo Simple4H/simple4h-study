@@ -9,5 +9,6 @@ spring:
         service-name: ${spring.application.name}
         heartbeat:
           enabled: true
+        register: true
   application:
     name: sample-service

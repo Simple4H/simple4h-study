@@ -19,6 +19,6 @@ public class SampleController {
 
     @GetMapping("get")
     public String get() {
-        return iDemoFeignService.getUserInfo();
+        return iDemoFeignService.getUserInfo2();
     }
 }
