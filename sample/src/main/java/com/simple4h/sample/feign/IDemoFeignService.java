@@ -16,6 +16,6 @@ public interface IDemoFeignService {
 //    @GetMapping(value = "/user/get_info")
 //    String getUserInfo();
 
-    @RequestMapping(value = "/user/get_info", method = RequestMethod.GET)
+    @RequestMapping(value = "/demo/get_info", method = RequestMethod.GET)
     String getUserInfo2();
 }
