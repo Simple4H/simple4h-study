@@ -1,4 +1,4 @@
-package com.simple4h.common.service;
+package com.simple4h.demo.service;
 
 /**
  * author Create By Simple4H

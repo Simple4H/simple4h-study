@@ -13,6 +13,9 @@
         <module>common</module>
         <module>sample</module>
         <module>gateway</module>
+        <module>kafka</module>
+        <module>redis</module>
+        <module>rabbitmq</module>
     </modules>
 
     <name>study</name>
@@ -40,10 +43,10 @@
         <openfeign-version>2.2.5.RELEASE</openfeign-version>
         <actuator-version>2.3.4.RELEASE</actuator-version>
         <spring-cloud-gateway-version>2.2.5.RELEASE</spring-cloud-gateway-version>
-        <jackson-databind-version>2.11.2</jackson-databind-version>
         <spring-web-version>5.2.9.RELEASE</spring-web-version>
         <spring-boot-maven-plugin>2.3.4.RELEASE</spring-boot-maven-plugin>
         <httpclient-version>4.5.13</httpclient-version>
+        <fasterxml-jackson-version>2.11.2</fasterxml-jackson-version>
     </properties>
 
     <dependencyManagement>
@@ -186,7 +189,13 @@
             <dependency>
                 <groupId>com.fasterxml.jackson.core</groupId>
                 <artifactId>jackson-databind</artifactId>
-                <version>${jackson-databind-version}</version>
+                <version>${fasterxml-jackson-version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-annotations</artifactId>
+                <version>${fasterxml-jackson-version}</version>
             </dependency>
 
             <dependency>

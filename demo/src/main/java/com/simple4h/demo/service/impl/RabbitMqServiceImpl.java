@@ -1,6 +1,6 @@
-package com.simple4h.common.service.impl;
+package com.simple4h.demo.service.impl;
 
-import com.simple4h.common.service.IRabbitMqService;
+import com.simple4h.demo.service.IRabbitMqService;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

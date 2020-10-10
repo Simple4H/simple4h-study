@@ -1,8 +1,8 @@
-package com.simple4h.common.service.impl;
+package com.simple4h.demo.service.impl;
 
 import com.alibaba.fastjson.JSONObject;
 import com.simple4h.common.entity.Message;
-import com.simple4h.common.service.IKafkaService;
+import com.simple4h.demo.service.IKafkaService;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
 

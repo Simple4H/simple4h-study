@@ -1,6 +1,6 @@
-package com.simple4h.common.service.impl;
+package com.simple4h.demo.service.impl;
 
-import com.simple4h.common.service.IRedisService;
+import com.simple4h.demo.service.IRedisService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Service;
