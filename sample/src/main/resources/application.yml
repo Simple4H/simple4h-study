@@ -2,15 +2,8 @@ server:
   port: 8888
 spring:
   cloud:
-    consul:
+    nacos:
       discovery:
-        port: 8500
-        hostname: 127.0.0.1
-        service-name: ${spring.application.name}
-        heartbeat:
-          enabled: true
-        register: true
-        instance-id: ${spring.application.name}:${server.port}
-        health-check-path: /actuator/health
+        server-addr: 127.0.0.1:8848
   application:
     name: sample-service
