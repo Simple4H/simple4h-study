@@ -3,11 +3,12 @@ package com.simple4h.demo.controller;
 import com.simple4h.common.response.ServerResponse;
 import com.simple4h.demo.domain.User;
 import com.simple4h.demo.service.IUserService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import javax.annotation.Resource;
 
 /**
  * author Create By Simple4H
@@ -17,7 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/demo/")
 public class DemoController {
 
-    @Autowired
+    @Resource
     private IUserService iUserService;
 
     @GetMapping("{userId}")
@@ -26,7 +27,7 @@ public class DemoController {
     }
 
     @GetMapping("get_info")
-    public String getUserInfo(){
+    public String getUserInfo() {
         return "Simple4H";
     }
 }
