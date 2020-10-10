@@ -39,3 +39,4 @@ src/.DS_Store
 /common/target/
 /kafka/target/
 /sample/target/
+/gateway/target/

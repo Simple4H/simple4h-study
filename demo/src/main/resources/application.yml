@@ -55,14 +55,7 @@ spring:
     # 密码
     password: guest
   cloud:
-    consul:
-      discovery:
-        port: 8500
-        hostname: 127.0.0.1
-        service-name: ${spring.application.name}
-        heartbeat:
-          enabled: true
-        register: true
+
 # Mybatis
 mybatis:
   mapper-locations: classpath:mappers/*.xml

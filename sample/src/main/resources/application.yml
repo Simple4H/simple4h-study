@@ -10,5 +10,7 @@ spring:
         heartbeat:
           enabled: true
         register: true
+        instance-id: ${spring.application.name}:${server.port}
+        health-check-path: /actuator/health
   application:
     name: sample-service
