@@ -1,5 +1,6 @@
 package com.simple4h.sample.entity;
 
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
@@ -13,6 +14,7 @@ import lombok.experimental.Accessors;
 @Setter
 @ToString
 @Accessors(chain = true)
+@EqualsAndHashCode
 public class Sample {
 
     private Integer id;

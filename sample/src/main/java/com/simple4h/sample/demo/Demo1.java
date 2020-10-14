@@ -19,11 +19,7 @@ public class Demo1 {
 
     public static void main(String[] args) {
 
-        Sample s1 = new Sample(1, "simple4h", "p1", 24, "M");
-        Sample s2 = new Sample(2, "rich", "p2", 24, "M");
-        Sample s3 = new Sample(3, "zhiFeng", "p3", 24, "F");
-
-        ArrayList<Sample> samples = Lists.newArrayList(s1, s2, s3);
+        ArrayList<Sample> samples = getSampleLists();
 
 //        Function<List<Sample>, List<String>> listFunction = s -> s.stream().map(Sample::getSex).collect(Collectors.toList());
 //
@@ -42,5 +38,12 @@ public class Demo1 {
         log.info("collect:{}", JSONObject.toJSONString(collect));
 
 
+    }
+    public static ArrayList<Sample> getSampleLists() {
+        Sample s1 = new Sample(1, "simple4h", "p1", 24, "M");
+        Sample s2 = new Sample(2, "rich", "p2", 24, "M");
+        Sample s3 = new Sample(3, "zhiFeng", "p3", 24, "F");
+        Sample s4 = new Sample(4, "tao", "p4", 25, "F");
+        return Lists.newArrayList(s1, s2, s3, s4);
     }
 }
