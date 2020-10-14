@@ -1,12 +1,10 @@
 package com.simple4h.sample.demo;
 
 import com.alibaba.fastjson.JSONObject;
-import com.google.common.collect.Lists;
 import com.simple4h.sample.entity.Sample;
 import lombok.extern.slf4j.Slf4j;
 
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.function.Predicate;
@@ -36,7 +34,7 @@ public class Demo3 {
     public static void dateTest() {
         String format = new SimpleDateFormat("yyyy-MM-dd ").format(new Date());
 
-        log.info("d1 is:{}00:00:00,d2 is:{}23:59:59",format,format);
+        log.info("d1 is:{}00:00:00,d2 is:{}23:59:59", format, format);
     }
 
 
