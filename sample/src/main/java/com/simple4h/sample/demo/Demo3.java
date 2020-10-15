@@ -5,10 +5,13 @@ import com.simple4h.sample.entity.Sample;
 import lombok.extern.slf4j.Slf4j;
 
 import java.text.SimpleDateFormat;
+import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
+import java.util.stream.Stream;
 
 /**
  * author Create By Simple4H
@@ -19,9 +22,11 @@ public class Demo3 {
 
 
     public static void main(String[] args) {
-        dateTest();
+//        dateTest();
+//
+//        filterList();
 
-        filterList();
+        anyMatch();
     }
 
     public static void filterList() {
@@ -35,6 +40,23 @@ public class Demo3 {
         String format = new SimpleDateFormat("yyyy-MM-dd ").format(new Date());
 
         log.info("d1 is:{}00:00:00,d2 is:{}23:59:59", format, format);
+    }
+
+    public static void toList() {
+        int[] a = new int[]{1, 2, 4, 5};
+
+        IntStream intStream = IntStream.of(1, 2, 3, 4, 5);
+        List<Integer> collect1 = intStream.boxed().collect(Collectors.toList());
+        List<Integer> collect2 = intStream.mapToObj(Integer::new).collect(Collectors.toList());
+
+        List<Integer> list = Arrays.stream(a).boxed().collect(Collectors.toList());
+
+        List<int[]> collect = Stream.of(a).limit(10).collect(Collectors.toList());
+
+    }
+
+    public static void anyMatch() {
+        log.info("result:{}", Demo1.getSampleLists().stream().allMatch(s -> s.getName().equals("simple4h")));
     }
 
 
