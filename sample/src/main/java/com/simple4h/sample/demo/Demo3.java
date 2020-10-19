@@ -1,13 +1,13 @@
 package com.simple4h.sample.demo;
 
 import com.alibaba.fastjson.JSONObject;
+import com.google.common.collect.Lists;
 import com.simple4h.sample.entity.Sample;
 import lombok.extern.slf4j.Slf4j;
 
 import java.text.SimpleDateFormat;
-import java.util.Arrays;
-import java.util.Date;
-import java.util.List;
+import java.util.*;
+import java.util.function.Function;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
@@ -26,7 +26,11 @@ public class Demo3 {
 //
 //        filterList();
 
-        anyMatch();
+//        anyMatch();
+
+//        functionTest();
+
+        listIsEmpty();
     }
 
     public static void filterList() {
@@ -57,6 +61,29 @@ public class Demo3 {
 
     public static void anyMatch() {
         log.info("result:{}", Demo1.getSampleLists().stream().allMatch(s -> s.getName().equals("simple4h")));
+    }
+
+    public static void functionTest() {
+        Function<List<Sample>, List<Integer>> f1 = sampleList -> {
+            return sampleList.stream().map(Sample::getId).collect(Collectors.toList());
+        };
+
+        HashMap<Integer, List<Sample>> hashMap = new HashMap<>();
+        hashMap.put(1, Demo1.getSampleLists());
+
+        List<Integer> lists = f1.apply(hashMap.get(1));
+        log.info("lists:{}", JSONObject.toJSONString(lists));
+
+    }
+
+    public static void listIsEmpty() {
+        ArrayList<String> lists = Lists.newArrayList();
+
+        if (lists.isEmpty()) {
+            log.info("true");
+        } else {
+            log.info("false");
+        }
     }
 
 
