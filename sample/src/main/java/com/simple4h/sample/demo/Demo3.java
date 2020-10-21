@@ -30,7 +30,9 @@ public class Demo3 {
 
 //        functionTest();
 
-        listIsEmpty();
+//        listIsEmpty();
+
+        list2Map();
     }
 
     public static void filterList() {
@@ -84,6 +86,18 @@ public class Demo3 {
         } else {
             log.info("false");
         }
+    }
+
+    public static void list2Map() {
+        ArrayList<Sample> sampleLists = Demo1.getSampleLists();
+
+        Map<String, Sample> toMap = sampleLists.stream().collect(Collectors.toMap(Sample::getName, Function.identity(), (v1, v2) -> v2));
+
+        // groupingBy去重
+        LinkedHashMap<String, Set<Sample>> groupingMap = sampleLists.stream().collect(Collectors.groupingBy(Sample::getSex, LinkedHashMap::new, Collectors.toSet()));
+
+        log.info("toMap is :{}", JSONObject.toJSONString(toMap));
+        log.info("groupingMap is :{}", JSONObject.toJSONString(groupingMap));
     }
 
 
