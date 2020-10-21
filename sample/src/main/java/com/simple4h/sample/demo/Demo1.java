@@ -39,11 +39,13 @@ public class Demo1 {
 
 
     }
+
     public static ArrayList<Sample> getSampleLists() {
         Sample s1 = new Sample(1, "simple4h", "p1", 24, "M");
         Sample s2 = new Sample(2, "rich", "p2", 24, "M");
-        Sample s3 = new Sample(3, "zhiFeng", "p3", 24, "F");
+        Sample s3 = new Sample(3, "zhiFeng", "p3", 24, "M");
         Sample s4 = new Sample(4, "tao", "p4", 25, "F");
-        return Lists.newArrayList(s1, s2, s3, s4);
+        Sample s5 = new Sample(4, "tao", "p4", 25, "F");
+        return Lists.newArrayList(s1, s2, s3, s4, s5);
     }
 }
