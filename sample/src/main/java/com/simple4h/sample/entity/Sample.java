@@ -34,4 +34,7 @@ public class Sample {
         this.age = age;
         this.sex = sex;
     }
+
+    public Sample() {
+    }
 }
