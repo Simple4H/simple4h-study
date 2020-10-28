@@ -5,10 +5,10 @@
     <parent>
         <groupId>com.simple4h</groupId>
         <artifactId>simple4h-study</artifactId>
-        <version>1.0.0-RELEASE</version>
+        <version>1.0.1-RELEASE</version>
     </parent>
     <artifactId>sample</artifactId>
-    <version>1.0.0-RELEASE</version>
+    <version>1.0.1-RELEASE</version>
     <name>sample</name>
     <description>sample module</description>
 
