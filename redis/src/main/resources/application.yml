@@ -1,14 +1,4 @@
-server:
-  port: 8888
 spring:
-  cloud:
-    nacos:
-      discovery:
-        server-addr: 39.108.60.4:8848
-  application:
-    name: sample-service
-  profiles:
-    active: redis
   redis:
     host: 127.0.0.1
     port: 6379

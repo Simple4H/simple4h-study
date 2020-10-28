@@ -25,6 +25,12 @@
         </dependency>
 
         <dependency>
+            <groupId>com.simple4h</groupId>
+            <artifactId>redis</artifactId>
+            <version>1.0.0-RELEASE</version>
+        </dependency>
+
+        <dependency>
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
         </dependency>
