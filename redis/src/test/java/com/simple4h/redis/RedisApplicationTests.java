@@ -6,7 +6,6 @@ import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.data.redis.core.RedisTemplate;
 
 @SpringBootTest
 @Slf4j
@@ -15,11 +14,8 @@ class RedisApplicationTests {
     @Autowired
     private IRedisService iRedisService;
 
-    @Autowired
-    private RedisTemplate redisTemplate;
-
     @Test
-    void contextLoads() {
+    void testGetValueKey() {
         log.info("value:{}", JSONObject.toJSONString(iRedisService.getValueKey("a")));
     }
 

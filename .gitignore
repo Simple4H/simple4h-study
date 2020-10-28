@@ -40,3 +40,4 @@ src/.DS_Store
 /kafka/target/
 /sample/target/
 /gateway/target/
+/redis/target/
