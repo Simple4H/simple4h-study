@@ -3,6 +3,7 @@ package com.simple4h.sample.demo;
 import com.alibaba.fastjson.JSONObject;
 import com.google.common.collect.Lists;
 import com.simple4h.sample.entity.Sample;
+import com.simple4h.sample.entity.User;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.ArrayList;
@@ -47,5 +48,14 @@ public class Demo1 {
         Sample s4 = new Sample(4, "tao", "p4", 25, "F");
         Sample s5 = new Sample(4, "tao", "p4", 25, "F");
         return Lists.newArrayList(s1, s2, s3, s4, s5);
+    }
+
+    public static ArrayList<Sample> getUserLists() {
+
+        User u1 = new User(21, "Simple4H-1", "asd", 24, "M", "www.google.com", "185");
+        User u2 = new User(22, "Simple4H-2", "123", 21, "F", "www.baidu.com.com", "176");
+        User u3 = new User(23, "Simple4H-3", "asd123", 12, "M", "www.github.com", "186");
+
+        return Lists.newArrayList(u1, u2, u3);
     }
 }
