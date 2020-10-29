@@ -15,7 +15,7 @@ import lombok.experimental.Accessors;
 @ToString
 @Accessors(chain = true)
 @EqualsAndHashCode(callSuper = false)
-public class User extends Sample{
+public class User extends Sample {
 
     private String url;
 

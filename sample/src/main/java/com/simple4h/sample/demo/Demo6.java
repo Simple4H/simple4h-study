@@ -32,10 +32,22 @@ public class Demo6 {
         return list.stream().map(Sample::getId).collect(Collectors.toList());
     }
 
+    /**
+     * List 转换成 String
+     *
+     * @param stringList Lists
+     * @return 字符串
+     */
     public static String list2Str(List<String> stringList) {
         return String.join(",", stringList);
     }
 
+    /**
+     * String 转换成List
+     *
+     * @param string 字符串
+     * @return 字符串
+     */
     public static List<String> str2List(String string) {
         return Arrays.stream(string.split(",")).map(String::valueOf).collect(Collectors.toList());
     }

@@ -35,6 +35,9 @@ public class Demo3 {
         list2Map();
     }
 
+    /**
+     * 多条件过滤
+     */
     public static void filterList() {
         Predicate<Sample> con1 = s -> s.getName().equals("simple4h");
         Predicate<Sample> con2 = s -> s.getName().equals("rich");
@@ -42,12 +45,18 @@ public class Demo3 {
         log.info("filterList is:{}", JSONObject.toJSONString(samples));
     }
 
+    /**
+     * 时间格式化（非线程安全）
+     */
     public static void dateTest() {
         String format = new SimpleDateFormat("yyyy-MM-dd ").format(new Date());
 
         log.info("d1 is:{}00:00:00,d2 is:{}23:59:59", format, format);
     }
 
+    /**
+     * 数组转换成List
+     */
     public static void toList() {
         int[] a = new int[]{1, 2, 4, 5};
 
@@ -61,10 +70,16 @@ public class Demo3 {
 
     }
 
+    /**
+     * 配置字符串
+     */
     public static void anyMatch() {
         log.info("result:{}", Demo1.getSampleLists().stream().allMatch(s -> s.getName().equals("simple4h")));
     }
 
+    /**
+     * Java8 Function
+     */
     public static void functionTest() {
         Function<List<Sample>, List<Integer>> f1 = sampleList -> {
             return sampleList.stream().map(Sample::getId).collect(Collectors.toList());
@@ -78,6 +93,10 @@ public class Demo3 {
 
     }
 
+
+    /**
+     * list空判断
+     */
     public static void listIsEmpty() {
         ArrayList<String> lists = Lists.newArrayList();
 
@@ -88,6 +107,9 @@ public class Demo3 {
         }
     }
 
+    /**
+     * List转成Map
+     */
     public static void list2Map() {
         ArrayList<Sample> sampleLists = Demo1.getSampleLists();
 
