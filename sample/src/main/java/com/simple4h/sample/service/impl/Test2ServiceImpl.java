@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
  * author Create By Simple4H
  * date 2020-10-28 17:34
  */
-@Service("iTestService")
+@Service("iTest2Service")
 public class Test2ServiceImpl implements ITest2Service {
 
     @Override
