@@ -20,6 +20,12 @@
     <dependencies>
 
         <dependency>
+            <groupId>com.simple4h</groupId>
+            <artifactId>auto-configuration</artifactId>
+            <version>1.0.1-RELEASE</version>
+        </dependency>
+
+        <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-openfeign</artifactId>
         </dependency>
