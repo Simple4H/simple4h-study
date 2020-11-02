@@ -7,7 +7,21 @@ spring:
         server-addr: 39.108.60.4:8848
   application:
     name: sample-service
+  security:
+    user:
+      name: actuator
+      password: 123456
 simple4h:
   auto:
     configuration:
       word: abcabcabc
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: always
+    shutdown:
+      enabled: true
