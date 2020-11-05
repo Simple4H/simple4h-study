@@ -1,6 +1,6 @@
 # Server Port
 server:
-  port: 9999
+  port: 8001
 # Spring
 spring:
   application:
