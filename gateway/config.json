@@ -1,0 +1,33 @@
+{
+  "routeList": [
+    {
+      "id": "demo_route",
+      "uri": "lb://demo-service",
+      "filters": [],
+      "order": 0,
+      "predicates": [
+        {
+          "args": {
+            "pattern": "/demo/**"
+          },
+          "name": "Path"
+        }
+      ]
+    },
+    {
+      "id": "sample_route",
+      "uri": "lb://sample-service",
+      "filters": [],
+      "order": 0,
+      "predicates": [
+        {
+          "args": {
+            "pattern": "/sample/**"
+          },
+          "name": "Path"
+        }
+      ]
+    }
+  ],
+  "refreshGatewayRoute": "true"
+}
