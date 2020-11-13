@@ -3,6 +3,8 @@ package com.simple4h.sample.controller;
 import com.simple4h.autoconfiguration.service.AutoService;
 import com.simple4h.sample.feign.IDemoFeignService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -13,6 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @RequestMapping("/sample/")
+@RefreshScope
 public class SampleController {
 
     @Autowired
@@ -20,6 +23,9 @@ public class SampleController {
 
     @Autowired
     private AutoService autoService;
+
+    @Value("author")
+    private String author;
 
     @GetMapping("get")
     public String get() {
@@ -29,5 +35,10 @@ public class SampleController {
     @GetMapping("auto")
     public String auto() {
         return autoService.sayWhat();
+    }
+
+    @GetMapping("consulConfig")
+    public String consulConfig() {
+        return author;
     }
 }

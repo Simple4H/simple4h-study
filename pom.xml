@@ -23,7 +23,6 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <spring.cloud-version>Hoxton.SR8</spring.cloud-version>
-        <spring-cloud-alibaba-version>2.2.3.RELEASE</spring-cloud-alibaba-version>
         <spring-boot-starter-version>2.3.4.RELEASE</spring-boot-starter-version>
         <java.version>1.8</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -45,6 +44,7 @@
         <spring-boot-maven-plugin>2.3.4.RELEASE</spring-boot-maven-plugin>
         <httpclient-version>4.5.13</httpclient-version>
         <fasterxml-jackson-version>2.11.2</fasterxml-jackson-version>
+        <consul-version>2.2.5.RELEASE</consul-version>
     </properties>
 
     <dependencyManagement>
@@ -66,17 +66,15 @@
             </dependency>
 
             <dependency>
-                <groupId>com.alibaba.cloud</groupId>
-                <artifactId>spring-cloud-alibaba-dependencies</artifactId>
-                <version>${spring-cloud-alibaba-version}</version>
-                <type>pom</type>
-                <scope>import</scope>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-consul-discovery</artifactId>
+                <version>${consul-version}</version>
             </dependency>
 
             <dependency>
-                <groupId>com.alibaba.cloud</groupId>
-                <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
-                <version>${spring-cloud-alibaba-version}</version>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-consul-config</artifactId>
+                <version>${consul-version}</version>
             </dependency>
 
             <dependency>
