@@ -60,7 +60,13 @@ spring:
       port: 8500
       discovery:
         service-name: ${spring.application.name}
-
+  zipkin:
+    base-url: http://localhost:9411
+    sender:
+      type: web
+  sleuth:
+    sampler:
+      rate: 10
 # Mybatis
 mybatis:
   mapper-locations: classpath:mappers/*.xml

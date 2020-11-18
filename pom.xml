@@ -45,6 +45,8 @@
         <httpclient-version>4.5.13</httpclient-version>
         <fasterxml-jackson-version>2.11.2</fasterxml-jackson-version>
         <consul-version>2.2.5.RELEASE</consul-version>
+        <zipkin-stsart-version>2.2.5.RELEASE</zipkin-stsart-version>
+        <sleuth-stsart-version>2.2.5.RELEASE</sleuth-stsart-version>
     </properties>
 
     <dependencyManagement>
@@ -222,6 +224,18 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-security</artifactId>
                 <version>${spring-boot-starter-version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-zipkin</artifactId>
+                <version>${zipkin-stsart-version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-sleuth</artifactId>
+                <version>${sleuth-stsart-version}</version>
             </dependency>
 
         </dependencies>
