@@ -5,10 +5,10 @@
 	<parent>
 		<groupId>com.simple4h</groupId>
 		<artifactId>simple4h-study</artifactId>
-		<version>1.0.1-RELEASE</version>
+		<version>1.0.3-RELEASE</version>
 	</parent>
 	<artifactId>gateway</artifactId>
-	<version>1.0.1-RELEASE</version>
+	<version>1.0.3-RELEASE</version>
 	<name>gateway</name>
 	<description>Demo project for Spring Boot</description>
 
@@ -87,6 +87,13 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<executions>
+					<execution>
+						<goals>
+							<goal>repackage</goal>
+						</goals>
+					</execution>
+				</executions>
 			</plugin>
 		</plugins>
 	</build>
