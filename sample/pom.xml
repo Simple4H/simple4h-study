@@ -5,10 +5,10 @@
     <parent>
         <groupId>com.simple4h</groupId>
         <artifactId>simple4h-study</artifactId>
-        <version>1.0.1-RELEASE</version>
+        <version>1.0.3-RELEASE</version>
     </parent>
     <artifactId>sample</artifactId>
-    <version>1.0.1-RELEASE</version>
+    <version>1.0.3-RELEASE</version>
     <name>sample</name>
     <description>sample module</description>
 
@@ -22,7 +22,7 @@
         <dependency>
             <groupId>com.simple4h</groupId>
             <artifactId>auto-configuration</artifactId>
-            <version>1.0.1-RELEASE</version>
+            <version>1.0.3-RELEASE</version>
         </dependency>
 
         <dependency>
@@ -101,7 +101,7 @@
         <dependency>
             <groupId>com.simple4h</groupId>
             <artifactId>common</artifactId>
-            <version>1.0.1-RELEASE</version>
+            <version>1.0.3-RELEASE</version>
         </dependency>
 
         <dependency>
@@ -131,16 +131,10 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-                <version>${spring-boot-maven-plugin}</version>
-                <configuration>
-                    <!-- 指定该Main Class为全局的唯一入口 -->
-                    <mainClass>com.simple4h.sample.SampleApplication</mainClass>
-                    <layout>JAR</layout>
-                </configuration>
                 <executions>
                     <execution>
                         <goals>
-                            <goal>repackage</goal><!--可以把依赖的包都打包到生成的Jar包中-->
+                            <goal>repackage</goal>
                         </goals>
                     </execution>
                 </executions>

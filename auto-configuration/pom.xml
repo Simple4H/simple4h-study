@@ -5,10 +5,10 @@
 	<parent>
 		<groupId>com.simple4h</groupId>
 		<artifactId>simple4h-study</artifactId>
-		<version>1.0.1-RELEASE</version>
+		<version>1.0.3-RELEASE</version>
 	</parent>
 	<artifactId>auto-configuration</artifactId>
-	<version>1.0.1-RELEASE</version>
+	<version>1.0.3-RELEASE</version>
 	<name>auto-configuration</name>
 	<description>auto-configuration module</description>
 
