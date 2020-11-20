@@ -47,6 +47,7 @@
         <consul-version>2.2.5.RELEASE</consul-version>
         <zipkin-stsart-version>2.2.5.RELEASE</zipkin-stsart-version>
         <sleuth-stsart-version>2.2.5.RELEASE</sleuth-stsart-version>
+        <redis-reactive-version>2.4.0</redis-reactive-version>
     </properties>
 
     <dependencyManagement>
@@ -236,6 +237,12 @@
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-starter-sleuth</artifactId>
                 <version>${sleuth-stsart-version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-data-redis-reactive</artifactId>
+                <version>${redis-reactive-version}</version>
             </dependency>
 
         </dependencies>
