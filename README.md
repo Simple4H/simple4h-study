@@ -25,6 +25,7 @@ docker-compose -f Docker-compose-backup.yml -p simple4h-project up
 - RabbitMQ
 - Kafka
 - Gateway
+    - RateLimit
 - Zipkin
 - Sleuth
 - DockerFile & Docker-Compose
