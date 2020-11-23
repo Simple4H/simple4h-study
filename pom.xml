@@ -48,6 +48,7 @@
         <zipkin-stsart-version>2.2.5.RELEASE</zipkin-stsart-version>
         <sleuth-stsart-version>2.2.5.RELEASE</sleuth-stsart-version>
         <redis-reactive-version>2.4.0</redis-reactive-version>
+        <mybatis-plus-version>3.4.1</mybatis-plus-version>
     </properties>
 
     <dependencyManagement>
@@ -243,6 +244,12 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-data-redis-reactive</artifactId>
                 <version>${redis-reactive-version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>${mybatis-plus-version}</version>
             </dependency>
 
         </dependencies>

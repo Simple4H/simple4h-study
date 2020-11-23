@@ -7,7 +7,7 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-@MapperScan("com.simple4h.demo")
+@MapperScan("com.simple4h.demo.dao")
 @ComponentScan({"com.simple4h.demo", "com.simple4h.common"})
 @EnableDiscoveryClient
 public class DemoApplication {
