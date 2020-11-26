@@ -59,5 +59,19 @@ spring:
         max-idle: 16
         max-wait: 300ms
         max-active: 32
+  boot:
+    admin:
+      client:
+        url: http://127.0.0.1:8003
 server:
   port: 8000
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: always
+    shutdown:
+      enabled: true

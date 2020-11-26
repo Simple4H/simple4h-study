@@ -42,3 +42,4 @@ src/.DS_Store
 /gateway/target/
 /auto-configuration/target/
 /docker/
+/admin/target/

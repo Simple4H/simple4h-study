@@ -49,6 +49,8 @@
         <sleuth-stsart-version>2.2.5.RELEASE</sleuth-stsart-version>
         <redis-reactive-version>2.4.0</redis-reactive-version>
         <mybatis-plus-version>3.4.1</mybatis-plus-version>
+        <admin-starter-server>2.3.1</admin-starter-server>
+        <reactor-netty-version>0.9.10.RELEASE</reactor-netty-version>
     </properties>
 
     <dependencyManagement>
@@ -250,6 +252,24 @@
                 <groupId>com.baomidou</groupId>
                 <artifactId>mybatis-plus-boot-starter</artifactId>
                 <version>${mybatis-plus-version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>de.codecentric</groupId>
+                <artifactId>spring-boot-admin-starter-server</artifactId>
+                <version>${admin-starter-server}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>io.projectreactor.netty</groupId>
+                <artifactId>reactor-netty</artifactId>
+                <version>${reactor-netty-version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>de.codecentric</groupId>
+                <artifactId>spring-boot-admin-starter-client</artifactId>
+                <version>${admin-starter-server}</version>
             </dependency>
 
         </dependencies>
