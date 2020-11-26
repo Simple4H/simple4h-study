@@ -33,6 +33,10 @@ spring:
   sleuth:
     sampler:
       rate: 10
+  boot:
+    admin:
+      client:
+        url: http://127.0.0.1:8003
 #  security:
 #    user:
 #      name: actuator

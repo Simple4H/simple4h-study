@@ -136,6 +136,11 @@
             <artifactId>mybatis-plus-boot-starter</artifactId>
         </dependency>
 
+        <dependency>
+            <groupId>de.codecentric</groupId>
+            <artifactId>spring-boot-admin-starter-client</artifactId>
+        </dependency>
+
     </dependencies>
 
     <build>
