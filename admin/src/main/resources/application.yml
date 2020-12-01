@@ -15,6 +15,10 @@ spring:
   sleuth:
     sampler:
       rate: 10
+  boot:
+    admin:
+      discovery:
+        ignored-services: consul
 server:
   port: 8003
 management:
