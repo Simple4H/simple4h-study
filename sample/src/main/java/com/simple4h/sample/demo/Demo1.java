@@ -50,6 +50,12 @@ public class Demo1 {
         return Lists.newArrayList(s1, s2, s3, s4, s5);
     }
 
+    public static ArrayList<Sample> getSampleLists2() {
+        Sample s1 = new Sample(1, "simple4h", "p1", 24, "M");
+        Sample s2 = new Sample(2, "rich", "p2", 24, "M");
+        return Lists.newArrayList(s1, s2);
+    }
+
     public static ArrayList<Sample> getUserLists() {
 
         User u1 = new User(21, "Simple4H-1", "asd", 24, "M", "www.google.com", "185");
