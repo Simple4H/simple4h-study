@@ -29,5 +29,13 @@ docker-compose -f Docker-compose-backup.yml -p simple4h-project up
 - Zipkin
 - Sleuth
 - DockerFile & Docker-Compose
+
+## 服务
+- Consul http://127.0.0.1:8500
+- Zipkin http://127.0.0.1:9411
+- Gateway-Service http://127.0.0.1:8000
+- Demo-Service http://127.0.0.1:8001
+- Sample-Service http://127.0.0.1:8002
+- Admin-Service http://127.0.0.1:8003
 ## 感谢
 <img src="https://raw.githubusercontent.com/simplecxm/simple4h-study/master/file/jetbrains-variant-4.png" width="50%" alt="Jetbrains">
