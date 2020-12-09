@@ -3,7 +3,16 @@
     {
       "id": "demo_route",
       "uri": "lb://demo-service",
-      "filters": [],
+      "filters": [
+        {
+          "args": {
+            "redis-rate-limiter.replenishRate": "1",
+            "redis-rate-limiter.burstCapacity": "1",
+            "key-resolver": "#{@ipKeyResolver}"
+          },
+          "name": "RequestRateLimiter"
+        }
+      ],
       "order": 0,
       "predicates": [
         {
@@ -17,7 +26,16 @@
     {
       "id": "sample_route",
       "uri": "lb://sample-service",
-      "filters": [],
+      "filters": [
+        {
+          "args": {
+            "redis-rate-limiter.replenishRate": "1",
+            "redis-rate-limiter.burstCapacity": "1",
+            "key-resolver": "#{@pathKeyResolver}"
+          },
+          "name": "RequestRateLimiter"
+        }
+      ],
       "order": 0,
       "predicates": [
         {

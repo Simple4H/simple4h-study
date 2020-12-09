@@ -2,12 +2,9 @@ spring:
   application:
     name: admin
   cloud:
-    consul:
-      host: 127.0.0.1
-      port: 8500
-    loadbalancer:
-      ribbon:
-        enabled: false
+    nacos:
+      discovery:
+        server-addr: 39.108.60.4:8848
   zipkin:
     base-url: http://localhost:9411
     sender:
@@ -18,7 +15,7 @@ spring:
   boot:
     admin:
       discovery:
-        ignored-services: consul
+        ignored-services: nacos
 server:
   port: 8003
 management:
