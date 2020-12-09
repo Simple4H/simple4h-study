@@ -2,28 +2,9 @@ server:
   port: 8002
 spring:
   cloud:
-    consul:
-      host: 127.0.0.1
-      port: 8500
+    nacos:
       discovery:
-        service-name: ${spring.application.name}
-      config:
-        # 开启文件配置中心
-        enabled: true
-        # 配置文件夹前缀
-        prefix: sample-config
-        # 配置默认文件夹
-        defaultContext: ${spring.application.name}
-        # 配置默认key
-#        data-key: data
-        # 配置文件环境分隔符
-#        profileSeparator: ','
-        # 配置文件格式 eg: 1.8 jdk 可能存在冲突需要更新版本
-        format: YAML
-        # 定时刷新配置
-        watch:
-          delay: 1000
-          enabled: true
+        server-addr: 39.108.60.4:8848
   application:
     name: sample-service
   zipkin:

@@ -51,6 +51,7 @@
         <mybatis-plus-version>3.4.1</mybatis-plus-version>
         <admin-starter-server>2.3.0</admin-starter-server>
         <reactor-netty-version>0.9.10.RELEASE</reactor-netty-version>
+        <alibaba-nacos-discovery-version>2.2.3.RELEASE</alibaba-nacos-discovery-version>
     </properties>
 
     <dependencyManagement>
@@ -270,6 +271,12 @@
                 <groupId>de.codecentric</groupId>
                 <artifactId>spring-boot-admin-starter-client</artifactId>
                 <version>${admin-starter-server}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+                <version>${alibaba-nacos-discovery-version}</version>
             </dependency>
 
         </dependencies>
