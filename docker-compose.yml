@@ -40,9 +40,9 @@ services:
       - ./docker/redis/data:/data
     command: redis-server --requirepass 123456
 
-  consul:
-    image: consul:1.7.9
-    container_name: consul
+  nacos:
+    image: nacos/nacos-server:1.4.0
+    container_name: nacos
     ports:
       - "8300:8300"
       - "8301:8301"

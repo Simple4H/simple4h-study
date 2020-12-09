@@ -20,7 +20,7 @@ docker-compose -f Docker-compose-backup.yml -p simple4h-project up
 - Spring Cloud
 - Mybatis
 - Redis
-- Consul
+- Nacos
 - Feign
 - RabbitMQ
 - Kafka
@@ -31,11 +31,15 @@ docker-compose -f Docker-compose-backup.yml -p simple4h-project up
 - DockerFile & Docker-Compose
 
 ## 服务
-- Consul http://127.0.0.1:8500
+- Nacos http://39.108.60.4:8848
 - Zipkin http://127.0.0.1:9411
 - Gateway-Service http://127.0.0.1:8000
 - Demo-Service http://127.0.0.1:8001
 - Sample-Service http://127.0.0.1:8002
 - Admin-Service http://127.0.0.1:8003
+
+## 特殊的
+如果需要修改Nacos日志文件的路径，在启动项添加下述参数
+`-Dnacos.logging.path=${you-pwd} -Dcom.alibaba.nacos.naming.cache.dir=${you-pwd} -DJM.SNAPSHOT.PATH=${you-pwd}`
 ## 感谢
 <img src="https://raw.githubusercontent.com/simplecxm/simple4h-study/master/file/jetbrains-variant-4.png" width="50%" alt="Jetbrains">
