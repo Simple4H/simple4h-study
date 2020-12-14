@@ -28,10 +28,12 @@ docker-compose -f Docker-compose-backup.yml -p simple4h-project up
     - RateLimit
 - Zipkin
 - Sleuth
+- Sentinel
 - DockerFile & Docker-Compose
 
 ## 服务
 - Nacos http://39.108.60.4:8848
+- Sentinel http://39.108.60.4:9949
 - Zipkin http://127.0.0.1:9411
 - Gateway-Service http://127.0.0.1:8000
 - Demo-Service http://127.0.0.1:8001
