@@ -20,7 +20,7 @@ spring:
             ###路由存储规则
             rule-type: flow
             ### 读取配置文件的 data-id
-            data-id: gateway-sentinel
+            data-id: gateway-service-sentinel
             ###  读取培训文件类型为json
             data-type: json
     gateway:
