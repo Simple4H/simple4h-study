@@ -5,6 +5,9 @@ spring:
     nacos:
       discovery:
         server-addr: 39.108.60.4:8848
+    sentinel:
+      transport:
+        dashboard: 39.108.60.4:9949
   application:
     name: sample-service
   zipkin:
