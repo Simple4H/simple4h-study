@@ -44,7 +44,6 @@
         <spring-boot-maven-plugin>2.3.4.RELEASE</spring-boot-maven-plugin>
         <httpclient-version>4.5.13</httpclient-version>
         <fasterxml-jackson-version>2.11.2</fasterxml-jackson-version>
-        <consul-version>2.2.5.RELEASE</consul-version>
         <zipkin-stsart-version>2.2.5.RELEASE</zipkin-stsart-version>
         <sleuth-stsart-version>2.2.5.RELEASE</sleuth-stsart-version>
         <redis-reactive-version>2.4.0</redis-reactive-version>
@@ -53,6 +52,7 @@
         <reactor-netty-version>0.9.10.RELEASE</reactor-netty-version>
         <alibaba-nacos-discovery-version>2.2.3.RELEASE</alibaba-nacos-discovery-version>
         <alibaba-sentinel-version>2.2.3.RELEASE</alibaba-sentinel-version>
+        <sentinel-datasource-nacos-version>1.8.0</sentinel-datasource-nacos-version>
     </properties>
 
     <dependencyManagement>
@@ -71,18 +71,6 @@
                 <version>${spring.cloud-version}</version>
                 <type>pom</type>
                 <scope>import</scope>
-            </dependency>
-
-            <dependency>
-                <groupId>org.springframework.cloud</groupId>
-                <artifactId>spring-cloud-starter-consul-discovery</artifactId>
-                <version>${consul-version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>org.springframework.cloud</groupId>
-                <artifactId>spring-cloud-starter-consul-config</artifactId>
-                <version>${consul-version}</version>
             </dependency>
 
             <dependency>
@@ -284,6 +272,12 @@
                 <groupId>com.alibaba.cloud</groupId>
                 <artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>
                 <version>${alibaba-sentinel-version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.alibaba.csp</groupId>
+                <artifactId>sentinel-datasource-nacos</artifactId>
+                <version>${sentinel-datasource-nacos-version}</version>
             </dependency>
 
         </dependencies>

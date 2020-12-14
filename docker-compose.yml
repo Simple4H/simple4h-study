@@ -40,17 +40,6 @@ services:
       - ./docker/redis/data:/data
     command: redis-server --requirepass 123456
 
-  nacos:
-    image: nacos/nacos-server:1.4.0
-    container_name: nacos
-    ports:
-      - "8300:8300"
-      - "8301:8301"
-      - "8301:8301/udp"
-      - "8500:8500"
-      - "8600:8600"
-      - "8600:8600/udp"
-
   rabbit:
     image: rabbitmq:3.8.9-management
     container_name: rabbit
@@ -73,3 +62,11 @@ services:
     restart: always
     ports:
       - "9411:9411"
+
+  sentinel:
+    image: simple4h/sentinel:1.0
+    container_name: sentinel
+    hostname: sentinel
+    restart: always
+    ports:
+      - "9949:9949"
