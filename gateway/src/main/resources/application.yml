@@ -9,7 +9,20 @@ spring:
       GROUP: GATEWAY_GROUP
     sentinel:
       transport:
-        dashboard: 39.108.60.4:9949
+        dashboard: 127.0.0.1:9949
+      datasource:
+        ds:
+          nacos:
+            ### nacos连接地址
+            server-addr: 39.108.60.4:8848
+            ## nacos连接的分组
+            group-id: GATEWAY_GROUP
+            ###路由存储规则
+            rule-type: flow
+            ### 读取配置文件的 data-id
+            data-id: gateway-sentinel
+            ###  读取培训文件类型为json
+            data-type: json
     gateway:
       discovery:
         locator:
