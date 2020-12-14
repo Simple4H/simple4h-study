@@ -64,7 +64,7 @@ services:
       - "9411:9411"
 
   sentinel:
-    image: simple4h/sentinel:1.0
+    image: simple4h/sentinel:1.1
     container_name: sentinel
     hostname: sentinel
     restart: always
