@@ -7,6 +7,9 @@ spring:
         server-addr: 39.108.60.4:8848
       DATA_ID: gateway-config
       GROUP: GATEWAY_GROUP
+    sentinel:
+      transport:
+        dashboard: 39.108.60.4:9949
     gateway:
       discovery:
         locator:
