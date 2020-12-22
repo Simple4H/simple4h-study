@@ -17,6 +17,6 @@ public class Demo10 {
     }
 
     public static void randomAccount() {
-        log.info(UUID.randomUUID().toString().substring(0, 7));
+        log.info("x" + UUID.randomUUID().toString().substring(0, 7));
     }
 }
