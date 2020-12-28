@@ -13,11 +13,17 @@ public class Demo11 {
 
     public static void main(String[] args) {
         appendStr();
+        strip();
     }
 
     public static void appendStr() {
         String a = "abc";
         String b = "001";
         log.info(StringUtils.join(a,b));
+    }
+
+    public static void strip() {
+        String str = "[asdf,dsafjalsdfkj;ldkfj;sald]";
+        log.info(StringUtils.strip(str,"[]"));
     }
 }
