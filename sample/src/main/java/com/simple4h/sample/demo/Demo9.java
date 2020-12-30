@@ -23,6 +23,9 @@ public class Demo9 {
         flatMap();
     }
 
+    /**
+     * flatMap
+     */
     public static void flatMap() {
         ArrayList<ArrayList<Sample>> arrayLists = Lists.newArrayList(Demo1.getSampleLists(), Demo1.getSampleLists2());
         log.info("origin list is:{}", JSONObject.toJSONString(arrayLists));

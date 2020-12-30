@@ -16,14 +16,20 @@ public class Demo11 {
         strip();
     }
 
+    /**
+     * 拼接字符串
+     */
     public static void appendStr() {
         String a = "abc";
         String b = "001";
-        log.info(StringUtils.join(a,b));
+        log.info(StringUtils.join(a, b));
     }
 
+    /**
+     * 去指定符号
+     */
     public static void strip() {
         String str = "[asdf,dsafjalsdfkj;ldkfj;sald]";
-        log.info(StringUtils.strip(str,"[]"));
+        log.info(StringUtils.strip(str, "[]"));
     }
 }
