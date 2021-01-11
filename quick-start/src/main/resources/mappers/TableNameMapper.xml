@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.simple4h.quickstart.dao.TableNameMapper">
+  <resultMap id="BaseResultMap" type="com.simple4h.quickstart.domain.TableName">
+    <!--@mbg.generated-->
+    <!--@Table `table_name`-->
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="subject" jdbcType="VARCHAR" property="subject" />
+    <result column="score" jdbcType="INTEGER" property="score" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    `name`, subject, score
+  </sql>
+  <insert id="insert" parameterType="com.simple4h.quickstart.domain.TableName">
+    <!--@mbg.generated-->
+    insert into `table_name` (`name`, subject, score
+      )
+    values (#{name,jdbcType=VARCHAR}, #{subject,jdbcType=VARCHAR}, #{score,jdbcType=INTEGER}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.simple4h.quickstart.domain.TableName">
+    <!--@mbg.generated-->
+    insert into `table_name`
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="name != null">
+        `name`,
+      </if>
+      <if test="subject != null">
+        subject,
+      </if>
+      <if test="score != null">
+        score,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="name != null">
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="subject != null">
+        #{subject,jdbcType=VARCHAR},
+      </if>
+      <if test="score != null">
+        #{score,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+</mapper>

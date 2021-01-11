@@ -15,6 +15,7 @@
         <module>gateway</module>
         <module>auto-configuration</module>
         <module>admin</module>
+        <module>quick-start</module>
     </modules>
 
     <name>study</name>
