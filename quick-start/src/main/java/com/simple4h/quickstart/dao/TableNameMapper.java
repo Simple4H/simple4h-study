@@ -4,7 +4,7 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.simple4h.quickstart.domain.TableName;
 
 /**
- * TODO:
+ * tableName mapper
  *
  * @author Simple4H
  */

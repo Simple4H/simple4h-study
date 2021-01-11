@@ -1,7 +1,7 @@
 package com.simple4h.quickstart.domain;
 
 /**
- * TODO:
+ * 区域表
  *
  * @author Simple4H
  */

@@ -1,7 +1,7 @@
 package com.simple4h.quickstart.domain;
 
 /**
- * TODO:
+ * table name
  *
  * @author Simple4H
  */

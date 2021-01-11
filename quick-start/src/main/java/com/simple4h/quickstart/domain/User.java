@@ -3,13 +3,9 @@ package com.simple4h.quickstart.domain;
 import java.util.Date;
 
 /**
- * TODO:
+ * 用户表
  *
  * @author Simple4H
- */
-
-/**
- * 用户表
  */
 public class User {
     /**
