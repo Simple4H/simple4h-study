@@ -2,9 +2,7 @@ package com.simple4h.sample.feign;
 
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.cloud.openfeign.FeignClientsConfiguration;
-import org.springframework.stereotype.Component;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.GetMapping;
 
 /**
  * author Create By Simple4H
@@ -13,9 +11,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @FeignClient(value = "demo-service", configuration = FeignClientsConfiguration.class)
 public interface IDemoFeignService {
 
-//    @GetMapping(value = "/user/get_info")
-//    String getUserInfo();
-
-    @RequestMapping(value = "/demo/get_info", method = RequestMethod.GET)
+    @GetMapping("/demo/get_info")
     String getUserInfo2();
 }
