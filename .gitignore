@@ -43,3 +43,4 @@ src/.DS_Store
 /auto-configuration/target/
 /docker/
 /admin/target/
+/quick-start/target/
