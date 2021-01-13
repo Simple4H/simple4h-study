@@ -3,7 +3,7 @@ package com.simple4h.quickstart.service;
 import com.simple4h.quickstart.domain.User;
 
 /**
- * TODO:
+ * user接口类
  *
  * @author Simple4H
  */
