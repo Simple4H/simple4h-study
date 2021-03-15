@@ -55,6 +55,7 @@
         <alibaba-nacos-discovery-version>2.2.3.RELEASE</alibaba-nacos-discovery-version>
         <alibaba-sentinel-version>2.2.3.RELEASE</alibaba-sentinel-version>
         <sentinel-datasource-nacos-version>1.8.0</sentinel-datasource-nacos-version>
+        <hutool-all-version>5.5.9</hutool-all-version>
     </properties>
 
     <dependencyManagement>
@@ -280,6 +281,12 @@
                 <groupId>com.alibaba.csp</groupId>
                 <artifactId>sentinel-datasource-nacos</artifactId>
                 <version>${sentinel-datasource-nacos-version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>cn.hutool</groupId>
+                <artifactId>hutool-all</artifactId>
+                <version>${hutool-all-version}</version>
             </dependency>
 
         </dependencies>
