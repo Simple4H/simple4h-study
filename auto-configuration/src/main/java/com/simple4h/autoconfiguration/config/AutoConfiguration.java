@@ -9,14 +9,11 @@ import org.springframework.context.annotation.Configuration;
 
 /**
  * author Create By Simple4H
+ * <p>相当于一个普通的 java 配置类,当 AutoService 在类路径的条件下,将 application.yml 的相关的属性字段与该类一一对应，并生成 Bean</p>
  * date 2020-10-30 10:29
  */
-
-// 相当于一个普通的 java 配置类
 @Configuration
-// 当 AutoService 在类路径的条件下
 @ConditionalOnClass({AutoBean.class})
-// 将 application.yml 的相关的属性字段与该类一一对应，并生成 Bean
 @EnableConfigurationProperties(AutoProperties.class)
 public class AutoConfiguration {
 
