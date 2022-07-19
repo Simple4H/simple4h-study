@@ -1,7 +1,5 @@
 package com.simple4h.common.response;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 
 import java.io.Serializable;
@@ -12,7 +10,6 @@ import java.io.Serializable;
  * date 2020-09-25 10:17
  */
 @JsonSerialize
-@JsonInclude(JsonInclude.Include.NON_NULL)
 //保证序列化json的时候,如果是null的对象,key也会消失
 public class ServerResponse<T> implements Serializable {
 
@@ -68,7 +65,6 @@ public class ServerResponse<T> implements Serializable {
         return new ServerResponse<>(errorCode, errorMessage);
     }
 
-    @JsonIgnore
     //使之不在json序列化结果当中
     public boolean isSuccess() {
         return this.status == ResponseCode.SUCCESS.getCode();
