@@ -1,10 +1,9 @@
 package com.simple4h.sample.controller;
 
 import com.simple4h.autoconfiguration.service.AutoService;
-import com.simple4h.sample.feign.IDemoFeignService;
+import com.simple4h.sample.lock.RedisLock;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -15,22 +14,13 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @RequestMapping("/sample/")
-@RefreshScope
 public class SampleController {
-
-    @Autowired
-    private IDemoFeignService iDemoFeignService;
 
     @Autowired
     private AutoService autoService;
 
     @Value("author")
     private String author;
-
-    @GetMapping("get")
-    public String get() {
-        return iDemoFeignService.getUserInfo2();
-    }
 
     @GetMapping("auto")
     public String auto() {
@@ -40,5 +30,11 @@ public class SampleController {
     @GetMapping("consulConfig")
     public String consulConfig() {
         return author;
+    }
+
+    @RedisLock(key = "redis_lock")
+    @GetMapping("/index")
+    public String index() {
+        return "index";
     }
 }
