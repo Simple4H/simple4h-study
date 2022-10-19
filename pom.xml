@@ -45,7 +45,7 @@
         <spring-web-version>5.3.21</spring-web-version>
         <spring-boot-maven-plugin>2.3.4.RELEASE</spring-boot-maven-plugin>
         <httpclient-version>4.5.13</httpclient-version>
-        <fasterxml-jackson-version>2.13.3</fasterxml-jackson-version>
+        <fasterxml-jackson-version>2.13.4.1</fasterxml-jackson-version>
         <zipkin-stsart-version>2.2.5.RELEASE</zipkin-stsart-version>
         <sleuth-stsart-version>2.2.5.RELEASE</sleuth-stsart-version>
         <redis-reactive-version>2.4.0</redis-reactive-version>
