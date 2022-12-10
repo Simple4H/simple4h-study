@@ -42,7 +42,7 @@
         <openfeign-version>2.2.5.RELEASE</openfeign-version>
         <actuator-version>2.3.4.RELEASE</actuator-version>
         <spring-cloud-gateway-version>2.2.5.RELEASE</spring-cloud-gateway-version>
-        <spring-web-version>5.3.21</spring-web-version>
+        <spring-web-version>6.0.0</spring-web-version>
         <spring-boot-maven-plugin>2.3.4.RELEASE</spring-boot-maven-plugin>
         <httpclient-version>4.5.13</httpclient-version>
         <fasterxml-jackson-version>2.13.3</fasterxml-jackson-version>
