@@ -1,9 +1,6 @@
 package com.simple4h.sample.entity;
 
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 import lombok.experimental.Accessors;
 
 /**
@@ -15,6 +12,7 @@ import lombok.experimental.Accessors;
 @ToString
 @Accessors(chain = true)
 @EqualsAndHashCode(callSuper = false)
+@NoArgsConstructor
 public class User extends Sample {
 
     private String url;
