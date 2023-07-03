@@ -2,6 +2,7 @@ package com.simple4h.sample.controller;
 
 import com.simple4h.autoconfiguration.service.AutoService;
 import com.simple4h.sample.lock.RedisLock;
+import com.simple4h.sample.service.ITestService;
 import com.simple4h.sample.strategy.TestStrategyFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -29,6 +30,9 @@ public class SampleController {
     @Resource
     private TestStrategyFactory testStrategyFactory;
 
+    @Resource
+    private ITestService testService;
+
     @GetMapping("auto")
     public String auto() {
         return autoService.sayWhat();
@@ -48,5 +52,10 @@ public class SampleController {
     @GetMapping("{type}")
     public void type(@PathVariable("type")Integer type) {
         testStrategyFactory.getService(type).exec();
+    }
+
+    @GetMapping("bloomFilter")
+    public boolean bloomFilter(String val) {
+        return testService.bloomFilter(val);
     }
 }

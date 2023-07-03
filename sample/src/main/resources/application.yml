@@ -21,6 +21,9 @@ spring:
     admin:
       client:
         url: http://127.0.0.1:8003
+  redis:
+    password: 123456
+
 #  security:
 #    user:
 #      name: actuator

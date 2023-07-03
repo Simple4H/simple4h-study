@@ -7,4 +7,6 @@ package com.simple4h.sample.service;
 public interface ITestService {
 
     String appendStr(String string);
+
+    Boolean bloomFilter(String val);
 }

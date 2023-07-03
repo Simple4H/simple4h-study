@@ -57,6 +57,7 @@
         <sentinel-datasource-nacos-version>1.8.0</sentinel-datasource-nacos-version>
         <hutool-all-version>5.5.9</hutool-all-version>
         <jedis-version>4.2.3</jedis-version>
+        <redisson-version>3.22.1</redisson-version>
     </properties>
 
     <dependencyManagement>
@@ -313,6 +314,12 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-websocket</artifactId>
                 <version>${spring-boot-starter-version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.redisson</groupId>
+                <artifactId>redisson-spring-boot-starter</artifactId>
+                <version>${redisson-version}</version>
             </dependency>
 
 
