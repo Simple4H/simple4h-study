@@ -1,6 +1,7 @@
 package com.simple4h.sample.demo;
 
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.scheduling.concurrent.CustomizableThreadFactory;
 
 import java.util.concurrent.*;
 import java.util.concurrent.atomic.AtomicInteger;
@@ -13,7 +14,13 @@ import java.util.concurrent.atomic.AtomicInteger;
 @Slf4j
 public class Demo15 {
 
-    private static final ExecutorService executor = new ThreadPoolExecutor(0, 20, 2, TimeUnit.SECONDS, new ArrayBlockingQueue<>(3));
+    private static final ExecutorService executor = new ThreadPoolExecutor(0,
+            20,
+            2,
+            TimeUnit.SECONDS,
+            new ArrayBlockingQueue<>(3),
+            new CustomizableThreadFactory("thread-pool-"),
+            new ThreadPoolExecutor.AbortPolicy());
 
     private static final AtomicInteger result = new AtomicInteger(0);
 

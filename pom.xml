@@ -58,6 +58,7 @@
         <hutool-all-version>5.5.9</hutool-all-version>
         <jedis-version>4.2.3</jedis-version>
         <redisson-version>3.22.1</redisson-version>
+        <slf4j-verison>1.7.36</slf4j-verison>
     </properties>
 
     <dependencyManagement>
@@ -322,6 +323,19 @@
                 <version>${redisson-version}</version>
             </dependency>
 
+            <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api -->
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-api</artifactId>
+                <version>${slf4j-verison}</version>
+            </dependency>
+
+            <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-simple -->
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-simple</artifactId>
+                <version>${slf4j-verison}</version>
+            </dependency>
 
         </dependencies>
     </dependencyManagement>
