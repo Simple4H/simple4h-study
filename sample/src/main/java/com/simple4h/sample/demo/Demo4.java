@@ -53,9 +53,7 @@ public class Demo4 {
      * predicate(判断):如果想要判断一个数据,并且需要一个布尔类型的返回值,可以使用predicate接口.
      */
     public static void predicate() {
-        Predicate<String> predicate = (input) -> {
-            return input.equals("abc");
-        };
+        Predicate<String> predicate = (input) -> true;
 
         log.info("predicate is:{}", predicate.test("abc"));
 

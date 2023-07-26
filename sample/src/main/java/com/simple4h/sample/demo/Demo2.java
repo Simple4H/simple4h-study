@@ -38,7 +38,7 @@ public class Demo2 {
      * @return 最大数
      */
     public static Integer getMaxInteger(Integer... integers) {
-        if (integers.length <= 0) {
+        if (integers.length == 0) {
             return null;
         }
         return Arrays.stream(integers).sorted(Comparator.reverseOrder()).collect(Collectors.toList()).get(0);
