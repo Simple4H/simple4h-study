@@ -22,11 +22,12 @@
     <description>Constantly learning new skills</description>
 
     <properties>
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <maven.compiler.target>1.8</maven.compiler.target>
-        <spring.cloud-version>2021.0.3</spring.cloud-version>
-        <spring-boot-starter-version>2.7.2</spring-boot-starter-version>
-        <java.version>1.8</java.version>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+        <java.version>17</java.version>
+        <spring.cloud-version>2022.0.0</spring.cloud-version>
+        <alibaba-cloud-version>2022.0.0.0</alibaba-cloud-version>
+        <spring-boot-starter-version>3.0.2</spring-boot-starter-version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <lombok-version>1.18.12</lombok-version>
@@ -45,31 +46,37 @@
         <spring-web-version>5.3.21</spring-web-version>
         <spring-boot-maven-plugin>2.3.4.RELEASE</spring-boot-maven-plugin>
         <httpclient-version>4.5.13</httpclient-version>
-        <fasterxml-jackson-version>2.13.3</fasterxml-jackson-version>
-        <zipkin-stsart-version>2.2.5.RELEASE</zipkin-stsart-version>
-        <sleuth-stsart-version>2.2.5.RELEASE</sleuth-stsart-version>
+        <fasterxml-jackson-version>2.16.1</fasterxml-jackson-version>
+        <zipkin-stsart-version>2.2.8.RELEASE</zipkin-stsart-version>
         <redis-reactive-version>2.4.0</redis-reactive-version>
         <mybatis-plus-version>3.4.1</mybatis-plus-version>
-        <admin-starter-server>2.3.0</admin-starter-server>
-        <reactor-netty-version>0.9.10.RELEASE</reactor-netty-version>
-        <alibaba-nacos-discovery-version>2.2.3.RELEASE</alibaba-nacos-discovery-version>
-        <alibaba-sentinel-version>2.2.3.RELEASE</alibaba-sentinel-version>
+        <admin-starter-server>3.0.2</admin-starter-server>
+        <reactor-netty-version>1.1.15</reactor-netty-version>
         <sentinel-datasource-nacos-version>1.8.0</sentinel-datasource-nacos-version>
         <hutool-all-version>5.5.9</hutool-all-version>
         <jedis-version>4.2.3</jedis-version>
         <redisson-version>3.22.1</redisson-version>
-        <slf4j-verison>1.7.36</slf4j-verison>
+        <slf4j-verison>2.0.11</slf4j-verison>
     </properties>
 
     <dependencyManagement>
 
         <dependencies>
 
+<!--            <dependency>-->
+<!--                <groupId>org.springframework.boot</groupId>-->
+<!--                <artifactId>spring-boot-starter</artifactId>-->
+<!--                <version>${spring-boot-starter-version}</version>-->
+<!--            </dependency>-->
+
             <dependency>
                 <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-starter</artifactId>
+                <artifactId>spring-boot-dependencies</artifactId>
                 <version>${spring-boot-starter-version}</version>
+                <type>pom</type>
+                <scope>import</scope>
             </dependency>
+
 
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
@@ -88,7 +95,7 @@
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-actuator</artifactId>
-                <version>${actuator-version}</version>
+                <version>${spring-boot-starter-version}</version>
             </dependency>
 
             <dependency>
@@ -180,7 +187,7 @@
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-starter-gateway</artifactId>
-                <version>${spring-cloud-gateway-version}</version>
+                <version>${spring-boot-starter-version}</version>
             </dependency>
 
             <dependency>
@@ -234,7 +241,7 @@
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-starter-sleuth</artifactId>
-                <version>${sleuth-stsart-version}</version>
+                <version>${spring-boot-starter-version}</version>
             </dependency>
 
             <dependency>
@@ -270,13 +277,13 @@
             <dependency>
                 <groupId>com.alibaba.cloud</groupId>
                 <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
-                <version>${alibaba-nacos-discovery-version}</version>
+                <version>${alibaba-cloud-version}</version>
             </dependency>
 
             <dependency>
                 <groupId>com.alibaba.cloud</groupId>
                 <artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>
-                <version>${alibaba-sentinel-version}</version>
+                <version>${alibaba-cloud-version}</version>
             </dependency>
 
             <dependency>
