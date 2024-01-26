@@ -3,7 +3,7 @@ package com.simple4h.sample.demo2;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.PropertyValues;
-import org.springframework.beans.factory.config.InstantiationAwareBeanPostProcessorAdapter;
+import org.springframework.beans.factory.config.InstantiationAwareBeanPostProcessor;
 
 import java.beans.PropertyDescriptor;
 
@@ -13,7 +13,7 @@ import java.beans.PropertyDescriptor;
  * @author Simple4H
  */
 @Slf4j
-public class MyInstantiationAwareBeanPostProcessor extends InstantiationAwareBeanPostProcessorAdapter {
+public class MyInstantiationAwareBeanPostProcessor implements InstantiationAwareBeanPostProcessor {
 
     public MyInstantiationAwareBeanPostProcessor() {
         super();
@@ -35,7 +35,6 @@ public class MyInstantiationAwareBeanPostProcessor extends InstantiationAwareBea
     }
 
     // 接口方法、设置某个属性时调用
-    @Override
     public PropertyValues postProcessPropertyValues(PropertyValues pvs, PropertyDescriptor[] pds, Object bean, String beanName) throws BeansException {
         log.info("【第7步】：InstantiationAwareBeanPostProcessor调用postProcessPropertyValues方法");
         return pvs;

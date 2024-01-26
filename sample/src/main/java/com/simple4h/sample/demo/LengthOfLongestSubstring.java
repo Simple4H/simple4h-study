@@ -52,10 +52,10 @@ public class LengthOfLongestSubstring {
     public static int lengthOfLongestSubstring3(String s) {
 
 
-        if (Objects.isNull(s) || s.equals("")) {
+        if (Objects.isNull(s) || s.isEmpty()) {
             return 0;
         }
-        if (s.trim().equals("") || s.length() == 1) {
+        if (s.trim().isEmpty() || s.length() == 1) {
             return 1;
         }
 

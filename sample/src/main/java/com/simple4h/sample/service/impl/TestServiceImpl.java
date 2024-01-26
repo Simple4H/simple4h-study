@@ -2,11 +2,11 @@ package com.simple4h.sample.service.impl;
 
 import com.simple4h.sample.service.ITest2Service;
 import com.simple4h.sample.service.ITestService;
+import jakarta.annotation.Resource;
 import org.redisson.api.RBloomFilter;
 import org.redisson.api.RedissonClient;
 import org.springframework.stereotype.Service;
 
-import javax.annotation.Resource;
 
 /**
  * Author Create By Simple4H
