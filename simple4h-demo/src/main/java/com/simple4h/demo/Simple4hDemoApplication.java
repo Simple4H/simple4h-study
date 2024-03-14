@@ -1,13 +1,13 @@
-package com.example.demo;
+package com.simple4h.demo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class DemoApplication {
+public class Simple4hDemoApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(DemoApplication.class, args);
+        SpringApplication.run(Simple4hDemoApplication.class, args);
     }
 
 }

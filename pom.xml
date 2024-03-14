@@ -9,7 +9,7 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>demo</module>
+        <module>simple4h-demo</module>
     </modules>
 
     <name>study</name>
