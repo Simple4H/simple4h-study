@@ -1,4 +1,0 @@
-# Auto Configure
-org.springframework.boot.autoconfigure.EnableAutoConfiguration= \
-com.simple4h.autoconfiguration.config.AutoConfiguration, \
-com.simple4h.autoconfiguration.service.AutoService

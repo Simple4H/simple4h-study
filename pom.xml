@@ -5,17 +5,11 @@
 
     <groupId>com.simple4h</groupId>
     <artifactId>simple4h-study</artifactId>
-    <version>1.0.3-RELEASE</version>
+    <version>2.0.0</version>
     <packaging>pom</packaging>
 
     <modules>
         <module>demo</module>
-        <module>common</module>
-        <module>sample</module>
-        <module>gateway</module>
-        <module>auto-configuration</module>
-        <module>admin</module>
-        <module>quick-start</module>
     </modules>
 
     <name>study</name>
@@ -27,7 +21,7 @@
         <java.version>17</java.version>
         <spring.cloud-version>2022.0.0</spring.cloud-version>
         <alibaba-cloud-version>2022.0.0.0</alibaba-cloud-version>
-        <spring-boot-starter-version>3.0.2</spring-boot-starter-version>
+        <spring-boot-starter-version>3.2.3</spring-boot-starter-version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <lombok-version>1.18.12</lombok-version>
@@ -43,7 +37,6 @@
         <openfeign-version>2.2.5.RELEASE</openfeign-version>
         <actuator-version>2.3.4.RELEASE</actuator-version>
         <spring-cloud-gateway-version>2.2.5.RELEASE</spring-cloud-gateway-version>
-        <spring-web-version>5.3.21</spring-web-version>
         <spring-boot-maven-plugin>2.3.4.RELEASE</spring-boot-maven-plugin>
         <httpclient-version>4.5.13</httpclient-version>
         <fasterxml-jackson-version>2.16.1</fasterxml-jackson-version>
@@ -63,12 +56,6 @@
 
         <dependencies>
 
-<!--            <dependency>-->
-<!--                <groupId>org.springframework.boot</groupId>-->
-<!--                <artifactId>spring-boot-starter</artifactId>-->
-<!--                <version>${spring-boot-starter-version}</version>-->
-<!--            </dependency>-->
-
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-dependencies</artifactId>
@@ -76,7 +63,6 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
-
 
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
@@ -200,12 +186,6 @@
                 <groupId>com.fasterxml.jackson.core</groupId>
                 <artifactId>jackson-annotations</artifactId>
                 <version>${fasterxml-jackson-version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>org.springframework</groupId>
-                <artifactId>spring-web</artifactId>
-                <version>${spring-web-version}</version>
             </dependency>
 
             <dependency>

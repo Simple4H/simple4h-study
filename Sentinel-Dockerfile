@@ -1,6 +1,0 @@
-FROM openjdk:8
-MAINTAINER crescentcxm@gmail.com
-WORKDIR /usr/developer/sentinel
-COPY sentinel-dashboard.jar /usr/developer/sentinel/sentinel-dashboard.jar
-EXPOSE 9949
-ENTRYPOINT ["java","-Dserver.port=9949","-Dcsp.sentinel.dashboard.server=localhost:9949","-Dproject.name=sentinel-dashboard","-jar","sentinel-dashboard.jar"]
