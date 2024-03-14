@@ -45,4 +45,4 @@ docker-compose -f Docker-compose-backup.yml -p simple4h-project up
 如果需要修改Nacos日志文件的路径，在启动项添加下述参数
 `-Dnacos.logging.path=${you-pwd} -Dcom.alibaba.nacos.naming.cache.dir=${you-pwd} -DJM.SNAPSHOT.PATH=${you-pwd}`
 ## 感谢
-<img src="https://raw.githubusercontent.com/simplecxm/simple4h-study/master/file/jetbrains-variant.png" width="50%" alt="Jetbrains">
+<img src="https://raw.githubusercontent.com/simplecxm/simple4h-study/master/img/jetbrains-variant.png" width="50%" alt="Jetbrains">
