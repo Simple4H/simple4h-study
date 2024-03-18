@@ -23,7 +23,7 @@ services:
     env_file:
       - ./docker/config/mysql.env
     volumes:
-      - ./log/mysql-logs:/var/lib/mysql
+      - ./mount-files/mysql-logs:/var/lib/mysql
     ports:
       - "3306:3306"
     healthcheck:
