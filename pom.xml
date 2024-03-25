@@ -11,6 +11,7 @@
     <modules>
         <module>simple4h-demo</module>
         <module>simple4h-base</module>
+        <module>simple4h-robot</module>
     </modules>
 
     <name>study</name>
@@ -48,6 +49,8 @@
         <jedis-version>5.1.2</jedis-version>
         <redisson-version>3.27.2</redisson-version>
         <slf4j-verison>2.0.11</slf4j-verison>
+        <dingtalk-version>2.0.0</dingtalk-version>
+        <commons-codec-version>1.16.1</commons-codec-version>
     </properties>
 
     <dependencyManagement>
