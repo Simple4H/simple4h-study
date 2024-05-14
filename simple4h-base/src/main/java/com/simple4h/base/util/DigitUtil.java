@@ -1,10 +1,13 @@
 package com.simple4h.base.util;
 
+import lombok.experimental.UtilityClass;
+
 /**
  * 数字工具类
  *
  * @author Simple4H
  */
+@UtilityClass
 public class DigitUtil {
 
     private static final char[] cnArr = new char[]{'一', '二', '三', '四', '五', '六', '七', '八', '九'};
@@ -17,16 +20,20 @@ public class DigitUtil {
      * @param chineseNum 中文数字
      * @return 阿拉伯数字
      */
-    public static int chineseNumToArabicNum(String chineseNum) {
+    public int chineseNumToArabicNum(String chineseNum) {
         int result = 0;
-        int temp = 1;//存放一个单位的数字如：十万
-        int count = 0;//判断是否有chArr
+        //存放一个单位的数字如：十万
+        int temp = 1;
+        //判断是否有chArr
+        int count = 0;
         for (int i = 0; i < chineseNum.length(); i++) {
-            boolean b = true;//判断是否是chArr
+            //判断是否是chArr
+            boolean b = true;
             char c = chineseNum.charAt(i);
             for (int j = 0; j < cnArr.length; j++) {//非单位，即数字
                 if (c == cnArr[j]) {
-                    if (0 != count) {//添加下一个单位之前，先把上一个单位值添加到结果中
+                    //添加下一个单位之前，先把上一个单位值添加到结果中
+                    if (0 != count) {
                         result += temp;
                         temp = 1;
                         count = 0;
@@ -37,7 +44,8 @@ public class DigitUtil {
                     break;
                 }
             }
-            if (b) {//单位{'十','百','千','万','亿'}
+            //单位{'十','百','千','万','亿'}
+            if (b) {
                 for (int j = 0; j < chArr.length; j++) {
                     if (c == chArr[j]) {
                         switch (j) {
@@ -63,7 +71,8 @@ public class DigitUtil {
                     }
                 }
             }
-            if (i == chineseNum.length() - 1) {//遍历到最后一个字符
+            //遍历到最后一个字符
+            if (i == chineseNum.length() - 1) {
                 result += temp;
             }
         }

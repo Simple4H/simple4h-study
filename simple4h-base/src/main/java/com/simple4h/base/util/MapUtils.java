@@ -21,7 +21,7 @@ public class MapUtils {
      *
      * @return Map<k, v>>
      */
-    public static <K extends Comparable<? super K>, V> Map<K, V> sortMap(Map<K, V> codes) {
+    public <K extends Comparable<? super K>, V> Map<K, V> sortMap(Map<K, V> codes) {
         return codes.entrySet().stream()
                 .sorted(Map.Entry.comparingByKey())
                 .collect(
@@ -39,7 +39,7 @@ public class MapUtils {
      *
      * @return String
      */
-    public static <K, V> K getFirstKey(Map<K, V> map) {
+    public <K, V> K getFirstKey(Map<K, V> map) {
         K obj = null;
         for (Map.Entry<K, V> entry : map.entrySet()) {
             obj = entry.getKey();
@@ -55,7 +55,7 @@ public class MapUtils {
      *
      * @return Map.Entry<K, V>
      */
-    public static <K, V> Map.Entry<K, V> getLastEntry(Map<K, V> map) {
+    public <K, V> Map.Entry<K, V> getLastEntry(Map<K, V> map) {
         Iterator<Map.Entry<K, V>> iterator = map.entrySet().iterator();
         Map.Entry<K, V> last = null;
         while (iterator.hasNext()) {
