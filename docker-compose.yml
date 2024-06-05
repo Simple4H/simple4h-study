@@ -1,33 +1,16 @@
 version: "3.8"
 services:
   nacos:
-    image: nacos/nacos-server:v2.3.1
-    container_name: nacos-standalone-mysql
-    env_file:
-      - ./docker/config/nacos-standalone-mysql.env
+    image: nacos/nacos-server:v2.3.2
+    container_name: nacos-standalone
+    environment:
+      - PREFER_HOST_MODE=hostname
+      - MODE=standalone
+      - NACOS_AUTH_IDENTITY_KEY=serverIdentity
+      - NACOS_AUTH_IDENTITY_VALUE=security
+      - NACOS_AUTH_TOKEN=SecretKey012345678901234567890123456789012345678901234567890123456789
     volumes:
-      - ./log/nacos-logs/:/home/nacos/logs
+      - ./standalone-logs/:/home/nacos/logs
     ports:
       - "8848:8848"
       - "9848:9848"
-    depends_on:
-      mysql:
-        condition: service_healthy
-    restart: always
-  mysql:
-    container_name: mysql
-    build:
-      context: .
-      dockerfile: ./docker/image/Dockerfile-MySQL
-    image: simple4h/mysql:8.0.30
-    env_file:
-      - ./docker/config/mysql.env
-    volumes:
-      - ./mount-files/mysql-logs:/var/lib/mysql
-    ports:
-      - "3306:3306"
-    healthcheck:
-      test: [ "CMD", "mysqladmin" ,"ping", "-h", "localhost" ]
-      interval: 5s
-      timeout: 10s
-      retries: 10
