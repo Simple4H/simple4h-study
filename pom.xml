@@ -21,14 +21,14 @@
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         <java.version>17</java.version>
-        <spring.cloud-version>2023.0.0</spring.cloud-version>
-        <alibaba-cloud-version>2022.0.0.0</alibaba-cloud-version>
+        <spring.cloud-version>2023.0.2</spring.cloud-version>
+        <alibaba-cloud-version>2023.0.1.0</alibaba-cloud-version>
         <spring-boot-starter-version>3.2.3</spring-boot-starter-version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <lombok-version>1.18.30</lombok-version>
         <mybatis-spring-boot-starter-version>3.0.3</mybatis-spring-boot-starter-version>
-        <mysql-connector-java>8.0.28</mysql-connector-java>
+        <mysql-connector-java>8.4.0</mysql-connector-java>
         <commons-lang3-version>3.14.0</commons-lang3-version>
         <alibaba-fastjson-version>2.0.47</alibaba-fastjson-version>
         <google-guava-version>33.0.0-jre</google-guava-version>
@@ -69,6 +69,14 @@
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
                 <version>${spring.cloud-version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+                <version>${alibaba-cloud-version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -129,8 +137,8 @@
             </dependency>
 
             <dependency>
-                <groupId>mysql</groupId>
-                <artifactId>mysql-connector-java</artifactId>
+                <groupId>com.mysql</groupId>
+                <artifactId>mysql-connector-j</artifactId>
                 <version>${mysql-connector-java}</version>
             </dependency>
 
@@ -257,6 +265,13 @@
 
             <dependency>
                 <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
+                <version>${alibaba-cloud-version}</version>
+            </dependency>
+
+
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
                 <artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>
                 <version>${alibaba-cloud-version}</version>
             </dependency>
@@ -313,6 +328,12 @@
                 <groupId>org.slf4j</groupId>
                 <artifactId>slf4j-simple</artifactId>
                 <version>${slf4j-verison}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-core</artifactId>
+                <version>${fasterxml-jackson-version}</version>
             </dependency>
 
         </dependencies>
