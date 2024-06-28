@@ -12,6 +12,7 @@
         <module>simple4h-demo</module>
         <module>simple4h-base</module>
         <module>simple4h-robot</module>
+        <module>simple4h-feign</module>
     </modules>
 
     <name>study</name>
@@ -23,7 +24,7 @@
         <java.version>17</java.version>
         <spring.cloud-version>2023.0.2</spring.cloud-version>
         <alibaba-cloud-version>2023.0.1.0</alibaba-cloud-version>
-        <spring-boot-starter-version>3.2.3</spring-boot-starter-version>
+        <spring-boot-starter-version>3.3.0</spring-boot-starter-version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <lombok-version>1.18.30</lombok-version>
@@ -35,7 +36,7 @@
         <spring-kafka-version>2.5.6.RELEASE</spring-kafka-version>
         <commons-pool2-version>2.8.1</commons-pool2-version>
         <junit-test-version>4.13.1</junit-test-version>
-        <openfeign-version>2.2.5.RELEASE</openfeign-version>
+        <openfeign-version>4.1.2</openfeign-version>
         <actuator-version>2.3.4.RELEASE</actuator-version>
         <httpclient-version>4.5.13</httpclient-version>
         <fasterxml-jackson-version>2.17.0</fasterxml-jackson-version>
@@ -51,10 +52,11 @@
         <slf4j-verison>2.0.11</slf4j-verison>
         <dingtalk-version>2.0.0</dingtalk-version>
         <commons-codec-version>1.16.1</commons-codec-version>
+        <loadbalancer-version>4.1.2</loadbalancer-version>
+        <maven-compiler-plugin-version>3.13.0</maven-compiler-plugin-version>
     </properties>
 
     <dependencyManagement>
-
         <dependencies>
 
             <dependency>
@@ -336,6 +338,12 @@
                 <version>${fasterxml-jackson-version}</version>
             </dependency>
 
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-loadbalancer</artifactId>
+                <version>${loadbalancer-version}</version>
+            </dependency>
+
         </dependencies>
     </dependencyManagement>
 
@@ -352,6 +360,17 @@
                         </goals>
                     </execution>
                 </executions>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${maven-compiler-plugin-version}</version>
+                <configuration>
+                    <compilerArgs>
+                        <arg>-parameters</arg>
+                    </compilerArgs>
+                </configuration>
             </plugin>
         </plugins>
     </build>
