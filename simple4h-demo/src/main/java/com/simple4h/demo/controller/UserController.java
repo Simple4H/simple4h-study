@@ -23,8 +23,13 @@ public class UserController {
     @Resource
     private List<ITestMultiService> testMultiServiceList;
 
+    @GetMapping("getById")
+    public SysUser getById(Long id) {
+        return sysUserService.getById(id);
+    }
+
     @GetMapping("{id}")
-    public SysUser getById(@PathVariable("id") Long id) {
+    public SysUser get(@PathVariable Long id) {
         return sysUserService.getById(id);
     }
 

@@ -41,3 +41,4 @@ gen
 /simple4h-robot/target/
 /simple4h-base/target/
 /standalone-logs/
+/simple4h-feign/target/
