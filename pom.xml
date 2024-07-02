@@ -54,6 +54,8 @@
         <commons-codec-version>1.16.1</commons-codec-version>
         <loadbalancer-version>4.1.2</loadbalancer-version>
         <maven-compiler-plugin-version>3.13.0</maven-compiler-plugin-version>
+        <easyexcel-version>4.0.1</easyexcel-version>
+        <vavr-version>0.10.4</vavr-version>
     </properties>
 
     <dependencyManagement>
@@ -342,6 +344,18 @@
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-starter-loadbalancer</artifactId>
                 <version>${loadbalancer-version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>easyexcel</artifactId>
+                <version>${easyexcel-version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>io.vavr</groupId>
+                <artifactId>vavr</artifactId>
+                <version>${vavr-version}</version>
             </dependency>
 
         </dependencies>
