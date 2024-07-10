@@ -13,7 +13,7 @@
     <description>simple4h-feign</description>
     <properties>
         <java.version>17</java.version>
-        <simple4h-base.version>2.0.0</simple4h-base.version>
+        <simple4h-base.version>2.0.1</simple4h-base.version>
     </properties>
     <dependencies>
         <dependency>
