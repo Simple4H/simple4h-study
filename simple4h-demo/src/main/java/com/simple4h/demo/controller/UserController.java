@@ -6,7 +6,10 @@ import com.simple4h.demo.domain.SysUser;
 import com.simple4h.demo.service.ISysUserService;
 import com.simple4h.demo.service.ITestMultiService;
 import jakarta.annotation.Resource;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
