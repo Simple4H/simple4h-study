@@ -4,8 +4,8 @@ import com.alibaba.fastjson2.JSON;
 import jakarta.annotation.PostConstruct;
 import jakarta.annotation.Resource;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.boot.autoconfigure.AutoConfiguration;
 import org.springframework.context.ApplicationContext;
-import org.springframework.stereotype.Component;
 import org.springframework.web.method.HandlerMethod;
 import org.springframework.web.servlet.mvc.condition.PathPatternsRequestCondition;
 import org.springframework.web.servlet.mvc.method.RequestMappingInfo;
@@ -21,8 +21,8 @@ import java.util.Objects;
  *
  * @author Simple4H
  */
-@Component
-@Slf4j//
+@AutoConfiguration
+@Slf4j
 public class EndpointInit {
 
     @Resource
