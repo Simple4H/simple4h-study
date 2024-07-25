@@ -26,8 +26,6 @@ public class DingTalkUtil {
 
     public static final String CUSTOM_ROBOT_TOKEN = "CUSTOM_ROBOT_TOKEN";
 
-//    public static final String USER_ID= "<you need @ group user's userId>";
-
     public static final String SECRET = "SECRET";
 
 //    public OapiRobotSendResponse sendMessage(String message) {
@@ -78,12 +76,13 @@ public class DingTalkUtil {
             OapiRobotSendRequest.Markdown markdown = new OapiRobotSendRequest.Markdown();
 
 
-            markdown.setTitle("title");
-            markdown.setText("## 【实时电价异常提醒】\n" +
-                    "##### xxxx电站，xxxx节点\n" +
-                    "##### 提醒内容：实时电价异常，600元/MWh\n" +
-                    "##### 提醒时间：2015-12-29 9:00\n" +
-                    "##### [链接](https://www.baidu.com)");
+            markdown.setTitle("异常提醒");
+            markdown.setText("""
+                    ## 【实时电价异常提醒】
+                    ##### xxxx电站，xxxx节点
+                    ##### 提醒内容：实时电价异常，600元/MWh
+                    ##### 提醒时间：2015-12-29 9:00
+                    ##### [查看详情](https://www.baidu.com)""");
             req.setMarkdown(markdown);
             return client.execute(req, CUSTOM_ROBOT_TOKEN);
         } catch (ApiException | NoSuchAlgorithmException | InvalidKeyException e) {
