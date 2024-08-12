@@ -7,6 +7,7 @@ import com.dingtalk.api.request.OapiRobotSendRequest;
 import com.dingtalk.api.response.OapiRobotSendResponse;
 import com.taobao.api.ApiException;
 import lombok.experimental.UtilityClass;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.codec.binary.Base64;
 
 import javax.crypto.Mac;
@@ -22,6 +23,7 @@ import java.security.NoSuchAlgorithmException;
  * @author Simple4H
  */
 @UtilityClass
+@Slf4j
 public class DingTalkUtil {
 
     public static final String CUSTOM_ROBOT_TOKEN = "CUSTOM_ROBOT_TOKEN";
@@ -58,41 +60,60 @@ public class DingTalkUtil {
 //        }
 //    }
 
-    public OapiRobotSendResponse sendMessage(String title, String message) {
+    private Boolean sendMarkDown(String title, String content) {
+
+
+        Long timestamp = System.currentTimeMillis();
+        String sign = getSign(timestamp);
+
+        //sign字段和timestamp字段必须拼接到请求URL上，否则会出现 310000 的错误信息
+        DingTalkClient client = new DefaultDingTalkClient("https://oapi.dingtalk.com/robot/send?sign=" + sign + "&timestamp=" + timestamp);
+        OapiRobotSendRequest req = new OapiRobotSendRequest();
+        req.setMsgtype("markdown");
+
+        OapiRobotSendRequest.Markdown markdown = new OapiRobotSendRequest.Markdown();
+
+
+        markdown.setTitle(title);
+        markdown.setText(content);
+        req.setMarkdown(markdown);
         try {
-            Long timestamp = System.currentTimeMillis();
-            String stringToSign = timestamp + "\n" + SECRET;
-            Mac mac = Mac.getInstance("HmacSHA256");
-            mac.init(new SecretKeySpec(SECRET.getBytes(StandardCharsets.UTF_8), "HmacSHA256"));
-            byte[] signData = mac.doFinal(stringToSign.getBytes(StandardCharsets.UTF_8));
-            String sign = URLEncoder.encode(new String(Base64.encodeBase64(signData)), StandardCharsets.UTF_8);
+            OapiRobotSendResponse execute = client.execute(req, CUSTOM_ROBOT_TOKEN);
+            boolean isSuccess = execute.getErrcode() == 0;
+            if (isSuccess) {
+                return true;
+            }
+            log.error("发送钉钉信息异常：{}", JSON.toJSONString(execute));
+            return false;
 
-
-            //sign字段和timestamp字段必须拼接到请求URL上，否则会出现 310000 的错误信息
-            DingTalkClient client = new DefaultDingTalkClient("https://oapi.dingtalk.com/robot/send?sign=" + sign + "&timestamp=" + timestamp);
-            OapiRobotSendRequest req = new OapiRobotSendRequest();
-            req.setMsgtype("markdown");
-
-            OapiRobotSendRequest.Markdown markdown = new OapiRobotSendRequest.Markdown();
-
-
-            markdown.setTitle("异常提醒");
-            markdown.setText("""
-                    ## 【实时电价异常提醒】
-                    ##### xxxx电站，xxxx节点
-                    ##### 提醒内容：实时电价异常，600元/MWh
-                    ##### 提醒时间：2015-12-29 9:00
-                    ##### [查看详情](https://www.baidu.com)""");
-            req.setMarkdown(markdown);
-            return client.execute(req, CUSTOM_ROBOT_TOKEN);
-        } catch (ApiException | NoSuchAlgorithmException | InvalidKeyException e) {
-            throw new RuntimeException(e);
+        } catch (ApiException e) {
+            log.error("钉钉异常", e);
+            throw new RuntimeException("钉钉异常");
         }
+    }
+
+    /**
+     * 获取签名
+     *
+     * @param timestamp 当前时间戳
+     * @return 签名
+     */
+    private String getSign(Long timestamp) {
+        String stringToSign = timestamp + "\n" + SECRET;
+        Mac mac;
+        try {
+            mac = Mac.getInstance("HmacSHA256");
+            mac.init(new SecretKeySpec(SECRET.getBytes(StandardCharsets.UTF_8), "HmacSHA256"));
+        } catch (NoSuchAlgorithmException | InvalidKeyException e) {
+            throw new RuntimeException("获取钉钉签名异常");
+        }
+
+        byte[] signData = mac.doFinal(stringToSign.getBytes(StandardCharsets.UTF_8));
+        return URLEncoder.encode(new String(Base64.encodeBase64(signData)), StandardCharsets.UTF_8);
     }
 
 
     public static void main(String[] args) {
-        OapiRobotSendResponse oapiRobotSendResponse = DingTalkUtil.sendMessage("实时电价异常提醒", "你好呀，声哥");
-        System.out.println(JSON.toJSONString(oapiRobotSendResponse));
+        DingTalkUtil.sendMarkDown("实时电价异常提醒", "你好呀，声哥");
     }
 }
