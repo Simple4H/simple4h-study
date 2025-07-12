@@ -30,7 +30,7 @@
         <lombok-version>1.18.30</lombok-version>
         <mybatis-spring-boot-starter-version>3.0.3</mybatis-spring-boot-starter-version>
         <mysql-connector-java>8.4.0</mysql-connector-java>
-        <commons-lang3-version>3.14.0</commons-lang3-version>
+        <commons-lang3-version>3.18.0</commons-lang3-version>
         <alibaba-fastjson-version>2.0.47</alibaba-fastjson-version>
         <google-guava-version>33.0.0-jre</google-guava-version>
         <spring-kafka-version>2.5.6.RELEASE</spring-kafka-version>
