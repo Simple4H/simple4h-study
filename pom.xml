@@ -39,7 +39,7 @@
         <openfeign-version>4.1.2</openfeign-version>
         <actuator-version>2.3.4.RELEASE</actuator-version>
         <httpclient-version>4.5.13</httpclient-version>
-        <fasterxml-jackson-version>2.17.0</fasterxml-jackson-version>
+        <fasterxml-jackson-version>2.18.6</fasterxml-jackson-version>
         <zipkin-stsart-version>2.2.8.RELEASE</zipkin-stsart-version>
         <redis-reactive-version>2.4.0</redis-reactive-version>
         <mybatis-plus-version>3.5.5</mybatis-plus-version>
